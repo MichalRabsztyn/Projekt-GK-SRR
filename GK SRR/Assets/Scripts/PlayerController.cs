@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public float movementSpeed;
     public LayerMask solidObjLayer;
+    public LayerMask grassLayer;
 
     private void Awake()
     {
@@ -21,10 +22,10 @@ public class PlayerController : MonoBehaviour
     {
         if (!isMoving)
         {
-            input.x = Input.GetAxisRaw("Horizontal"); //dziêki temu postaæ porusza siê zgodnie z p³ytakmi 
+            input.x = Input.GetAxisRaw("Horizontal"); //dziï¿½ki temu postaï¿½ porusza siï¿½ zgodnie z pï¿½ytakmi 
             input.y = Input.GetAxisRaw("Vertical");
 
-            if (input.x != 0) //usuwa poruszanie siê po skosie
+            if (input.x != 0) //usuwa poruszanie siï¿½ po skosie
             {
                 input.y = 0;
             }
@@ -53,10 +54,14 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPos, movementSpeed * Time.deltaTime);
             yield return null; //zacznij od tego punktu w kolejnym Update
+            
         }
         transform.position = targetPos;
 
         isMoving = false;
+
+        CheckForEncounters();
+
     }
 
     private bool IsWalkable(Vector3 targetPos)
@@ -66,6 +71,17 @@ public class PlayerController : MonoBehaviour
             return false;
         }
         return true;
+    }
+
+    private void CheckForEncounters()
+    {
+        if (Physics2D.OverlapCircle(transform.position, 0.2f, grassLayer) != null)
+        {
+            if (Random.Range(1,101) <= 10)
+            {
+                Debug.Log("Encoutered a wild kieszpot");
+            }
+        }
     }
 
 }
