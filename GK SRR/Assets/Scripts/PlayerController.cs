@@ -21,17 +21,10 @@ public class PlayerController : MonoBehaviour
     {
         if (!isMoving)
         {
-<<<<<<< Updated upstream
             input.x = Input.GetAxisRaw("Horizontal"); //dziêki temu postaæ porusza siê zgodnie z p³ytakmi 
             input.y = Input.GetAxisRaw("Vertical");
 
             if (input.x != 0) //usuwa poruszanie siê po skosie
-=======
-            input.x = Input.GetAxisRaw("Horizontal"); //dzieki temu postac porusza sie zgodnie z plytakmi 
-            input.y = Input.GetAxisRaw("Vertical");
-
-            if (input.x != 0) //usuwa poruszanie sie po skosie
->>>>>>> Stashed changes
             {
                 input.y = 0;
             }
