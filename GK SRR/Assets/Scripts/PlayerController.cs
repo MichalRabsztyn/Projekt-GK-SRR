@@ -22,10 +22,10 @@ public class PlayerController : MonoBehaviour
     {
         if (!isMoving)
         {
-            input.x = Input.GetAxisRaw("Horizontal"); //dzi�ki temu posta� porusza si� zgodnie z p�ytakmi 
+            input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
 
-            if (input.x != 0) //usuwa poruszanie si� po skosie
+            if (input.x != 0)
             {
                 input.y = 0;
             }
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPos, movementSpeed * Time.deltaTime);
-            yield return null; //zacznij od tego punktu w kolejnym Update
+            yield return null;
             
         }
         transform.position = targetPos;

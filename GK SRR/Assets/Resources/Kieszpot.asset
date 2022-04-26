@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da774ec96db90c49984f296c6821247, type: 3}
+  m_Name: Kieszpot
+  m_EditorClassIdentifier: 
+  name: Kieszpot1
+  type1: 1
+  type2: 0
+  maxHp: 0
+  attack: 0
+  defence: 0
+  spAttack: 0
+  spDefence: 0
+  speed: 0
+  description: 
+  frontSprite: {fileID: -1336985846, guid: 046886eb1c7b23748a6fecd2fd1c528a, type: 3}
+  backSprite: {fileID: -1775883479, guid: 046886eb1c7b23748a6fecd2fd1c528a, type: 3}
