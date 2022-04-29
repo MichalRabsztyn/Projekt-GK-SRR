@@ -7,10 +7,26 @@ public class Kieszpot
     KieszpotBase _base;
     int level;
 
+    public int HP { get; set; }
+
+    public List<Move> Moves { get; set; }
+
     public Kieszpot(KieszpotBase kBase, int kLevel)
     {
         _base = kBase;
         level = kLevel;
+        HP = _base.MaxHp;
+
+        Moves = new List<Move>();
+        foreach (var move in _base.LearnMoves)
+        {
+            if (move.Level <= level)
+            {
+                Moves.Add(new Move(move.Base));
+            }
+
+            if (Moves.Count >= 4) break;
+        }
     }
 
     public int MaxHp

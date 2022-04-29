@@ -21,6 +21,8 @@ public class KieszpotBase : ScriptableObject
     [SerializeField] Sprite frontSprite;
     [SerializeField] Sprite backSprite;
 
+    [SerializeField] List<LearnableMoves> learnableMoves;
+
     public string Name
     {
         get { return name; }
@@ -71,6 +73,19 @@ public class KieszpotBase : ScriptableObject
         get { return speed; }
     }
 
+    public List<LearnableMoves> LearnMoves 
+    { get { return learnableMoves; } }
+
+
+}
+[System.Serializable]
+public class LearnableMoves
+{
+    [SerializeField] MoveBase moveBase;
+    [SerializeField] int level;
+
+    public MoveBase Base { get { return moveBase; } }
+    public int Level { get { return level; } }
 }
 
 public enum Type
