@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da774ec96db90c49984f296c6821247, type: 3}
+  m_Name: OctopusF
+  m_EditorClassIdentifier: 
+  name: Akkorokamui
+  type1: 3
+  type2: 7
+  maxHp: 3990
+  attack: 40
+  defence: 30
+  spAttack: 10
+  spDefence: 8
+  speed: 6
+  description: The Akkorokamui is a gigantic octopus-like monster - it is said that
+    its enormus body can reach sized of up to 120 meters in length. She has craving
+    that cannot be satisfied, which makes her fickle with the propensity to do harm.
+    Akkorokamui's nature as an octopus means that it is persistent and it is near
+    impossible to escape its grasp without permission.
+  frontSprite: {fileID: 0}
+  backSprite: {fileID: 0}
+  learnableMoves: []

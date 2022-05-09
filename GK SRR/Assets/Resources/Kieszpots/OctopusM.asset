@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da774ec96db90c49984f296c6821247, type: 3}
+  m_Name: OctopusM
+  m_EditorClassIdentifier: 
+  name: Dr. Otto Gunther Octavius
+  type1: 3
+  type2: 11
+  maxHp: 1963
+  attack: 20
+  defence: 10
+  spAttack: 3
+  spDefence: 5
+  speed: 3
+  description: Dr. Otto Gunther Octavius, also known as Doc Ock is highly intelligent
+    optopus. After lost of his eye, he turned to a life of crime. He has stange obssesion
+    with Akkorokamui, the Pink Wrath.
+  frontSprite: {fileID: 0}
+  backSprite: {fileID: 0}
+  learnableMoves: []
