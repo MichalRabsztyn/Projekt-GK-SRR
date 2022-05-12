@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Akkorokamui
   type1: 3
-  type2: 7
+  type2: 14
   maxHp: 3990
   attack: 40
   defence: 30
@@ -26,6 +26,6 @@ MonoBehaviour:
     that cannot be satisfied, which makes her fickle with the propensity to do harm.
     Akkorokamui's nature as an octopus means that it is persistent and it is near
     impossible to escape its grasp without permission.
-  frontSprite: {fileID: 0}
-  backSprite: {fileID: 0}
+  mainSprite: {fileID: 0}
+  animator: {fileID: 0}
   learnableMoves: []

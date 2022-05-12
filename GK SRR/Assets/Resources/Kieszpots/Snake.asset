@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Python The PIP
   type1: 8
-  type2: 7
+  type2: 15
   maxHp: 991
   attack: 20
   defence: 10

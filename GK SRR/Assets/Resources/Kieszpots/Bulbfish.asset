@@ -10,20 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2da774ec96db90c49984f296c6821247, type: 3}
-  m_Name: OctopusM
+  m_Name: Bulbfish
   m_EditorClassIdentifier: 
-  name: Dr. Otto Gunther Octavius
-  type1: 3
-  type2: 7
-  maxHp: 1963
-  attack: 20
-  defence: 10
-  spAttack: 3
-  spDefence: 5
-  speed: 3
-  description: Dr. Otto Gunther Octavius, also known as Doc Ock is highly intelligent
-    optopus. After lost of his eye, he turned to a life of crime. He has stange obssesion
-    with Akkorokamui, the Pink Wrath.
+  name: Bulbfish
+  type1: 4
+  type2: 11
+  maxHp: 0
+  attack: 0
+  defence: 0
+  spAttack: 0
+  spDefence: 0
+  speed: 0
+  description: 
   mainSprite: {fileID: 0}
   animator: {fileID: 0}
   learnableMoves: []
