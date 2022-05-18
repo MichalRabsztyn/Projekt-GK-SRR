@@ -19,7 +19,7 @@ public class BattleDialogBox : MonoBehaviour
     [Header("DialogBox variables")]
     [SerializeField] int lettersPerSecond;
     [SerializeField] Color highlightedColor;
-    
+
 
     public void SetDialog(string dialog)
     {
@@ -32,7 +32,7 @@ public class BattleDialogBox : MonoBehaviour
         foreach (var letter in dialog.ToCharArray())
         {
             dialogText.text += letter;
-            yield return new WaitForSeconds(1f/ lettersPerSecond);
+            yield return new WaitForSeconds(1f / lettersPerSecond);
         }
 
         yield return new WaitForSeconds(1f);
@@ -56,7 +56,7 @@ public class BattleDialogBox : MonoBehaviour
 
     public void UpdateActionSelection(int selectAction)
     {
-        for(int i = 0; i < actionTexts.Count; i++)
+        for (int i = 0; i < actionTexts.Count; i++)
         {
             if (i == selectAction) actionTexts[i].color = highlightedColor;
             else actionTexts[i].color = Color.black;
@@ -75,11 +75,11 @@ public class BattleDialogBox : MonoBehaviour
         typeText.text = move.Base.Type.ToString();
     }
 
-    public void SetMoveNames(List<Move> moves)
+    public void SetMoveNames(Dictionary<KieszpotMoveName, Move> moves)
     {
-        for (int i = 0; i<moveTexts.Count; i++)
+        for (int i = 0; i < moveTexts.Count; i++)
         {
-            if (i < moves.Count) moveTexts[i].text = moves[i].Base.Name;
+            if (i < moves.Count) moveTexts[i].text = moves[(KieszpotMoveName)i].Base.Name;
             else moveTexts[i].text = "-";
         }
     }

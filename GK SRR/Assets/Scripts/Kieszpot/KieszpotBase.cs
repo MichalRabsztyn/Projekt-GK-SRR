@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Animations;
+using System;
 
 [CreateAssetMenu(fileName = "Kieszpot", menuName = "Kieszpot/Create new kieszpot")]
 public class KieszpotBase : ScriptableObject
@@ -19,14 +20,19 @@ public class KieszpotBase : ScriptableObject
     [Range(1, 10)] [SerializeField] int speed;
 
     [Space]
-    [TextArea(15,20)] [SerializeField] string description;
+    [TextArea(15, 20)] [SerializeField] string description;
 
     [Header("Textures")]
     [SerializeField] Sprite mainSprite;
-    [SerializeField] AnimatorController animator;
+    [SerializeField] AnimatorController animatorController;
 
     [Space]
-    [SerializeField] List<LearnableMoves> learnableMoves;
+    [SerializeField] LearnableMoves attackMove;
+    [SerializeField] LearnableMoves specialAttackMove;
+    [SerializeField] LearnableMoves healMove;
+    [SerializeField] LearnableMoves unknownMove;
+    Dictionary<KieszpotMoveName, LearnableMoves> learnableMoves = null;
+
 
     public string Name
     {
@@ -78,8 +84,32 @@ public class KieszpotBase : ScriptableObject
         get { return speed; }
     }
 
-    public List<LearnableMoves> LearnMoves 
-    { get { return learnableMoves; } }
+    public Sprite MainSprite
+    {
+        get { return mainSprite; }
+    }
+
+    public AnimatorController AnimatorController
+    {
+        get { return animatorController; }
+    }
+
+    public Dictionary<KieszpotMoveName, LearnableMoves> LearnableMoves
+    {
+        get
+        {
+            if (learnableMoves == null)
+            {
+                learnableMoves = new Dictionary<KieszpotMoveName, LearnableMoves>();
+                learnableMoves.Add(KieszpotMoveName.Attack, attackMove);
+                learnableMoves.Add(KieszpotMoveName.SpecialAttack, specialAttackMove);
+                learnableMoves.Add(KieszpotMoveName.Heal, healMove);
+                learnableMoves.Add(KieszpotMoveName.Unknown, unknownMove);
+            }
+
+            return learnableMoves;
+        }
+    }
 
 
 }
@@ -149,4 +179,12 @@ public class TypeChart
 
         return chart[row][col];
     }
+}
+
+public enum KieszpotMoveName
+{
+    Attack = 0,
+    SpecialAttack = 1,
+    Heal = 2,
+    Unknown = 3
 }

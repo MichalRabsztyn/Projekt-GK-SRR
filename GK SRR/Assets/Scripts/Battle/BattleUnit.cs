@@ -1,24 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
+[RequireComponent(typeof(BattleUnitAnimation))]
 public class BattleUnit : MonoBehaviour
 {
+    [Header("Settings")]
     [SerializeField] bool isPlayerUnit;
 
-    public Kieszpot Kieszpot { get; set; }
+    public Kieszpot Kieszpot { get; private set; }
+    public BattleUnitAnimation animationController { get; private set; }
+
+    private void Awake()
+    {
+        animationController = GetComponent<BattleUnitAnimation>();
+    }
 
     public void Setup(Kieszpot kieszpot)
     {
         Kieszpot = kieszpot;
+        animationController.Setup(Kieszpot.Base.AnimatorController);
+
         if (isPlayerUnit)
         {
-            //GetComponent<Image>().sprite = kieszpot.Base.BackSprite;
+            animationController.SetFaceAnimation(false);
         }
         else
         {
-            //GetComponent<Image>().sprite = kieszpot.Base.FrontSprite;
+            animationController.SetFaceAnimation(true);
         }
     }
 }

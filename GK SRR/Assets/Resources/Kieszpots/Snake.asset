@@ -28,9 +28,16 @@ MonoBehaviour:
 
     PIP makes enemy RIP.'
   mainSprite: {fileID: -630942374, guid: 49642f2954cc25e4d9833a01f4f4d9e4, type: 3}
-  animator: {fileID: 9100000, guid: e375800efe7db704abee5402eb04b680, type: 2}
-  learnableMoves:
-  - moveBase: {fileID: 11400000, guid: c6c1a4babe5e095498b21480c0a096eb, type: 2}
-    level: 2
-  - moveBase: {fileID: 11400000, guid: 4ae824e8da72e1c41b513aa25a5274bf, type: 2}
+  animatorController: {fileID: 9100000, guid: e375800efe7db704abee5402eb04b680, type: 2}
+  attackMove:
+    moveBase: {fileID: 11400000, guid: c6c1a4babe5e095498b21480c0a096eb, type: 2}
     level: 1
+  specialAttackMove:
+    moveBase: {fileID: 11400000, guid: 4ae824e8da72e1c41b513aa25a5274bf, type: 2}
+    level: 2
+  healMove:
+    moveBase: {fileID: 0}
+    level: 0
+  unknownMove:
+    moveBase: {fileID: 0}
+    level: 0

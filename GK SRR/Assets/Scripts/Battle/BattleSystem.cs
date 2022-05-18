@@ -47,9 +47,21 @@ public class BattleSystem : MonoBehaviour
     private IEnumerator PerformPlayerMove()
     {
         state = BattleState.Busy;
-        var move = playerUnit.Kieszpot.Moves[currentMove];
-        move.PP--;
+        Move move = null;
+
+        try
+        {
+            move = playerUnit.Kieszpot.Moves[(KieszpotMoveName)currentMove];
+            move.PP--;
+        }
+        catch (NullReferenceException ex)
+        {
+            Debug.LogError($"Player Unit can do not have move: {(KieszpotMoveName)currentMove}\n" + ex.Message);
+        }
         yield return dialogBox.TypeDialog($"{playerUnit.Kieszpot.Base.Name} used {move.Base.Name}");
+
+        playerUnit.animationController.PlayAttackAnimation((KieszpotMoveName)currentMove);
+        yield return new WaitForSeconds(0.5f);
 
         var damageDetails = enemyUnit.Kieszpot.TakeDamage(move, playerUnit.Kieszpot);
         yield return enemyHud.UpdateHP();
@@ -68,9 +80,22 @@ public class BattleSystem : MonoBehaviour
     private IEnumerator EnemyMove()
     {
         state = BattleState.EnemyMove;
-        var move = enemyUnit.Kieszpot.GetRandomMove();
-        move.PP--;
+        int enemyCurrentMove = 0;
+        Move move = null;
+
+        try
+        {
+            move = enemyUnit.Kieszpot.GetRandomMove(ref enemyCurrentMove);
+            move.PP--;
+        }
+        catch (NullReferenceException ex)
+        {
+            Debug.LogError($"Player Unit can do not have move: {(KieszpotMoveName)currentMove}\n" + ex.Message);
+        }
         yield return dialogBox.TypeDialog($"{enemyUnit.Kieszpot.Base.Name} used {move.Base.Name}");
+
+        enemyUnit.animationController.PlayAttackAnimation((KieszpotMoveName)enemyCurrentMove);
+        yield return new WaitForSeconds(0.5f);
 
         var damageDetails = playerUnit.Kieszpot.TakeDamage(move, enemyUnit.Kieszpot);
         yield return playerHud.UpdateHP();
@@ -165,7 +190,7 @@ public class BattleSystem : MonoBehaviour
             if (currentAction > 1) currentAction -= 2;
         }
 
-        dialogBox.UpdateMoveSelection(currentMove, playerUnit.Kieszpot.Moves[currentMove]);
+        dialogBox.UpdateMoveSelection(currentMove, playerUnit.Kieszpot.Moves[(KieszpotMoveName)currentMove]);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

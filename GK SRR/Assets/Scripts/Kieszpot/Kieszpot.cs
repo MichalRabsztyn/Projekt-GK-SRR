@@ -20,18 +20,23 @@ public class Kieszpot
 
     public int HP { get; set; }
 
-    public List<Move> Moves { get; set; }
+    public Dictionary<KieszpotMoveName, Move> Moves { get; set; }
 
     public void Init()
     {
         HP = MaxHp;
 
-        Moves = new List<Move>();
-        foreach (var move in Base.LearnMoves)
+        Moves = new Dictionary<KieszpotMoveName, Move>();
+        foreach (var move in Base.LearnableMoves)
         {
-            if (move.Level <= Level)
+            if(move.Value.Base == null)
             {
-                Moves.Add(new Move(move.Base));
+                continue;
+            }
+            
+            if (move.Value.Level <= Level)
+            {
+                Moves.Add(move.Key, new Move(move.Value.Base));
             }
 
             if (Moves.Count >= 4) break;
@@ -86,12 +91,12 @@ public class Kieszpot
 
         float boost = Random.Range(0.85f, 1f) * typeEffect * criticalHit;
         float kieszpotPower = (2 * kieszpot.Level + 10) / 250f;
-        float attackPower = kieszpotPower * move.Base.Power * ((float) attack / defence) + 2;
+        float attackPower = kieszpotPower * move.Base.Power * ((float)attack / defence) + 2;
         int damage = Mathf.FloorToInt(attackPower * boost);
 
         HP -= damage;
 
-        if(HP <= 0)
+        if (HP <= 0)
         {
             HP = 0;
             damageDetails.Fainted = true;
@@ -100,12 +105,13 @@ public class Kieszpot
         return damageDetails;
     }
 
-    public Move GetRandomMove()
+    public Move GetRandomMove(ref int id)
     {
         if (Moves.Count > 0)
         {
             int random = Random.Range(0, Moves.Count - 1);
-            return Moves[random];
+            id = random;
+            return Moves[(KieszpotMoveName)random];
         }
         return null;
     }
