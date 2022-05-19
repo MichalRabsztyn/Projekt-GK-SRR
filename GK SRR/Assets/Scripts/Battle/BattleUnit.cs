@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 [RequireComponent(typeof(BattleUnitAnimation))]
 public class BattleUnit : MonoBehaviour
@@ -22,10 +23,18 @@ public class BattleUnit : MonoBehaviour
         if (isPlayerUnit)
         {
             animationController.SetFaceAnimation(false);
+            animationController.PlayEnterAnimation(false);
         }
         else
         {
             animationController.SetFaceAnimation(true);
+            animationController.PlayEnterAnimation(true);
         }
+    }
+
+    public void FaceKieszpot()
+    {
+        if (isPlayerUnit) animationController.SetFaceAnimation(false);
+        else animationController.SetFaceAnimation(true);
     }
 }

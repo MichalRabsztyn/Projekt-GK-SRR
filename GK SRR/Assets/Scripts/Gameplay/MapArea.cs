@@ -6,7 +6,7 @@ public class MapArea : MonoBehaviour
 {
     [SerializeField] List<Kieszpot> wildKieszpots;
 
-    public Kieszpot GetRandomKieszpot()
+    public Kieszpot GetRandomWildKieszpot()
     {
         var wildKieszpot = wildKieszpots[Random.Range(0, wildKieszpots.Count)];
         wildKieszpot.Init();

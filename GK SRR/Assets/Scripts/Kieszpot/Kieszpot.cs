@@ -29,16 +29,8 @@ public class Kieszpot
         Moves = new Dictionary<KieszpotMoveName, Move>();
         foreach (var move in Base.LearnableMoves)
         {
-            if(move.Value.Base == null)
-            {
-                continue;
-            }
-            
-            if (move.Value.Level <= Level)
-            {
-                Moves.Add(move.Key, new Move(move.Value.Base));
-            }
-
+            if (move.Value.Base == null) continue;
+            if (move.Value.Level <= Level) Moves.Add(move.Key, new Move(move.Value.Base));
             if (Moves.Count >= 4) break;
         }
     }

@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
         worldCamera.gameObject.SetActive(false);
 
         var playerParty = playerController.GetComponent<KieszpotParty>();
-        var wildKieszpot = FindObjectOfType<MapArea>().GetComponent<MapArea>().GetRandomKieszpot();
+        var wildKieszpot = FindObjectOfType<MapArea>().GetComponent<MapArea>().GetRandomWildKieszpot();
 
         battleSystem.StartBattle(playerParty, wildKieszpot);
     }

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74d0d71626999b04d9fff2c4bbc9c2b3, type: 3}
-  m_Name: Lasso
+  m_Name: Pengiun_Sensei
   m_EditorClassIdentifier: 
-  name: Lasso
+  name: 
   description: 
-  type: 1
-  power: 150
-  accuracy: 8
-  pp: 2
+  type1: 0
+  power: 0
+  accuracy: 0
+  pp: 0

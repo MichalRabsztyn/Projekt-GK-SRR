@@ -7,6 +7,14 @@ public class KieszpotParty : MonoBehaviour
 {
     [SerializeField] List<Kieszpot> kieszpots;
 
+    public List<Kieszpot> Kieszpots
+    {
+        get
+        {
+            return kieszpots;
+        }
+    }
+
     private void Start()
     {
         foreach (var kieszpot in kieszpots)

@@ -9,19 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da774ec96db90c49984f296c6821247, type: 3}
-  m_Name: Bulbfish
+  m_Script: {fileID: 11500000, guid: 74d0d71626999b04d9fff2c4bbc9c2b3, type: 3}
+  m_Name: Blobfish_Rain
   m_EditorClassIdentifier: 
-  name: Bulbfish
-  type1: 4
-  type2: 11
-  maxHp: 0
-  attack: 0
-  defence: 0
-  spAttack: 0
-  spDefence: 0
-  speed: 0
+  name: Rain
   description: 
-  mainSprite: {fileID: 0}
-  animator: {fileID: 0}
-  learnableMoves: []
+  type: 11
+  power: 10
+  accuracy: 5
+  pp: 2
