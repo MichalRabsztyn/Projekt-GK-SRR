@@ -71,15 +71,20 @@ public class BattleDialogBox : MonoBehaviour
             else moveTexts[i].color = Color.black;
         }
 
-        movePPText.text = $"PP {move.PP}/{move.Base.PP}";
-        typeText.text = move.Base.Type.ToString();
+        if (move != null)
+        {
+            movePPText.text = $"PP {move.PP}/{move.Base.PP}";
+            typeText.text = move.Base.Type.ToString();
+        }
     }
 
     public void SetMoveNames(Dictionary<KieszpotMoveName, Move> moves)
     {
+        Move iteratedMove = null;
         for (int i = 0; i < moveTexts.Count; i++)
         {
-            if (i < moves.Count) moveTexts[i].text = moves[(KieszpotMoveName)i].Base.Name;
+            iteratedMove = moves[(KieszpotMoveName)i];
+            if (iteratedMove != null) moveTexts[i].text = iteratedMove.Base.Name;
             else moveTexts[i].text = "-";
         }
     }

@@ -74,7 +74,7 @@ public class BattleUnitAnimation : MonoBehaviour
                 Debug.LogWarning("Animation controller doesn't support Heal move yet!");
                 break;
 
-            case KieszpotMoveName.Unknown:
+            case KieszpotMoveName.Boost:
                 Debug.LogWarning("Animation controller doesn't support Unknown move yet!");
                 break;
 

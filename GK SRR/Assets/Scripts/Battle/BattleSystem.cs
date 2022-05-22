@@ -3,15 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BattleState { Start, PlayerAction, PlayerMove, EnemyMove, Busy, PartyScreen }
+public enum BattleState { Start, ActionSelection, MoveSelection, PerformMove, Busy, PartyScreen, BattleOver }
 
 public class BattleSystem : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] BattleUnit playerUnit;
     [SerializeField] BattleUnit enemyUnit;
-    [SerializeField] BattleHud playerHud;
-    [SerializeField] BattleHud enemyHud;
     [SerializeField] BattleDialogBox dialogBox;
     [SerializeField] PartyScreen partyScreen;
 
@@ -36,8 +34,6 @@ public class BattleSystem : MonoBehaviour
     {
         playerUnit.Setup(playerParty.GetHealthyKieszpot());
         enemyUnit.Setup(wildKieszpot);
-        playerHud.SetData(playerUnit.Kieszpot);
-        enemyHud.SetData(enemyUnit.Kieszpot);
 
         partyScreen.Init();
 
@@ -45,95 +41,122 @@ public class BattleSystem : MonoBehaviour
 
         yield return dialogBox.TypeDialog($"A wild {enemyUnit.Kieszpot.Base.Name} appeared.");
 
-        PlayerAction();
+        ChooseFirstTurn();
     }
 
-    private IEnumerator PerformPlayerMove()
+    void ChooseFirstTurn()
     {
-        state = BattleState.Busy;
-        Move move = null;
-
-        try
-        {
-            move = playerUnit.Kieszpot.Moves[(KieszpotMoveName)currentMove];
-            move.PP--;
-        }
-        catch (NullReferenceException ex)
-        {
-            Debug.LogError($"Player Unit can do not have move: {(KieszpotMoveName)currentMove}\n" + ex.Message);
-        }
-        yield return dialogBox.TypeDialog($"{playerUnit.Kieszpot.Base.Name} used {move.Base.Name}");
-
-        playerUnit.animationController.PlayMoveAnimation((KieszpotMoveName)currentMove, true);
-        yield return new WaitForSeconds(0.5f);
-
-        enemyUnit.animationController.PlayHitAnimation();
-
-        var damageDetails = enemyUnit.Kieszpot.TakeDamage(move, playerUnit.Kieszpot);
-        yield return enemyHud.UpdateHP();
-        yield return ShowDamageDetails(damageDetails);
-
-        if (damageDetails.Fainted)
-        {
-            yield return dialogBox.TypeDialog($"{enemyUnit.Kieszpot.Base.Name} fainted");
-
-            enemyUnit.animationController.PlayFaintAnimation();
-
-            yield return new WaitForSeconds(2f);
-            OnBattleOver(false);
-        }
+        if (playerUnit.Kieszpot.Speed >= enemyUnit.Kieszpot.Speed) ActionSelection();
         else StartCoroutine(EnemyMove());
+    }
+
+    private IEnumerator PlayerMove()
+    {
+        state = BattleState.PerformMove;
+        Move move = null;
+        move = playerUnit.Kieszpot.Moves[(KieszpotMoveName)currentMove];
+        yield return RunMove(playerUnit, enemyUnit, move);
+
+        if(state == BattleState.PerformMove) StartCoroutine(EnemyMove());
     }
 
     private IEnumerator EnemyMove()
     {
-        state = BattleState.EnemyMove;
+        state = BattleState.PerformMove;
         int enemyCurrentMove = 0;
         Move move = null;
 
-        try
+        move = enemyUnit.Kieszpot.GetRandomMove(ref enemyCurrentMove);
+        if (move != null) 
+            yield return RunMove(enemyUnit, playerUnit, move);
+        else
         {
-            move = enemyUnit.Kieszpot.GetRandomMove(ref enemyCurrentMove);
-            move.PP--;
+            Debug.LogWarning($"Enemy unit {enemyUnit.name} has no possible moves!");
+            yield return null;
         }
-        catch (NullReferenceException ex)
-        {
-            Debug.LogError($"Player Unit can do not have move: {(KieszpotMoveName)currentMove}\n" + ex.Message);
-        }
-        yield return dialogBox.TypeDialog($"{enemyUnit.Kieszpot.Base.Name} used {move.Base.Name}");
+        
+        if (state == BattleState.PerformMove) ActionSelection();
+    }
 
-        enemyUnit.animationController.PlayMoveAnimation((KieszpotMoveName)enemyCurrentMove, false);
+    IEnumerator RunMove(BattleUnit sourceUnit, BattleUnit targetUnit, Move move)
+    {
+        move.PP--;
+
+        yield return dialogBox.TypeDialog($"{sourceUnit.Kieszpot.Base.Name} used {move.Base.Name}");
+
+        sourceUnit.animationController.PlayMoveAnimation((KieszpotMoveName)currentMove, true);
         yield return new WaitForSeconds(0.5f);
 
-        playerUnit.animationController.PlayHitAnimation();
+        targetUnit.animationController.PlayHitAnimation();
 
-        var damageDetails = playerUnit.Kieszpot.TakeDamage(move, enemyUnit.Kieszpot);
-        yield return playerHud.UpdateHP();
-        yield return ShowDamageDetails(damageDetails);
-
-        if (damageDetails.Fainted)
+        if(move.Base.Category == MoveCategory.Status)
         {
-            yield return dialogBox.TypeDialog($"{playerUnit.Kieszpot.Base.Name} fainted");
+            yield return RunMoveEffects(move, sourceUnit.Kieszpot, targetUnit.Kieszpot);
+        }
+        else
+        {
+            var damageDetails = targetUnit.Kieszpot.TakeDamage(move, sourceUnit.Kieszpot);
+            yield return targetUnit.Hud.UpdateHP();
+            yield return ShowDamageDetails(damageDetails);
+        }
+            
 
-            playerUnit.animationController.PlayFaintAnimation();
-
+        if (targetUnit.Kieszpot.HP <= 0)
+        {
+            yield return dialogBox.TypeDialog($"{targetUnit.Kieszpot.Base.Name} fainted");
+            targetUnit.animationController.PlayFaintAnimation();
             yield return new WaitForSeconds(2f);
 
-            var nextKieszpot = playerParty.GetHealthyKieszpot();
-            if (nextKieszpot != null)
-            {
-                playerUnit.Setup(nextKieszpot);
-                playerHud.SetData(nextKieszpot);
-
-                dialogBox.SetMoveNames(nextKieszpot.Moves);
-
-                yield return dialogBox.TypeDialog($"Go {nextKieszpot.Base.Name}!");
-
-                PlayerAction();
-            }
-            else OnBattleOver(false);
+            CheckForBattleOver(targetUnit);
         }
-        else PlayerAction();
+
+        sourceUnit.Kieszpot.OnAfterTurn();
+        yield return ShowStatusChanges(sourceUnit.Kieszpot);
+        yield return sourceUnit.Hud.UpdateHP();
+
+        if (sourceUnit.Kieszpot.HP <= 0)
+        {
+            yield return dialogBox.TypeDialog($"{sourceUnit.Kieszpot.Base.Name} fainted");
+            sourceUnit.animationController.PlayFaintAnimation();
+            yield return new WaitForSeconds(2f);
+
+            CheckForBattleOver(sourceUnit);
+        }
+    }
+
+    IEnumerator RunMoveEffects(Move move, Kieszpot source, Kieszpot target)
+    {
+        var effects = move.Base.Effects;
+        if (effects.Boosts != null)
+        {
+            if (move.Base.Target == MoveTarget.Self) source.ApplyBoosts(effects.Boosts);
+            else target.ApplyBoosts(effects.Boosts);
+        }
+
+        if(effects.Status != ConditionID.none) target.SetStatus(effects.Status);
+
+        yield return ShowStatusChanges(source);
+        yield return ShowStatusChanges(target);
+    }
+
+    IEnumerator ShowStatusChanges(Kieszpot kieszpot)
+    {
+        while (kieszpot.StatusChanges.Count > 0)
+        {
+            var message = kieszpot.StatusChanges.Dequeue();
+            yield return dialogBox.TypeDialog(message);
+        }
+    }
+
+    void CheckForBattleOver(BattleUnit faintedUnit)
+    {
+        if (faintedUnit.IsPlayerUnit)
+        {
+            var nextKieszpot = playerParty.GetHealthyKieszpot();
+            if (nextKieszpot != null) OpenPartyScreen();
+            else BattleOver(false);
+        }
+        else BattleOver(true);
     }
 
     IEnumerator ShowDamageDetails(DamageDetails damageDetails)
@@ -143,9 +166,16 @@ public class BattleSystem : MonoBehaviour
         else if (damageDetails.Effectiveness < 1f) yield return dialogBox.TypeDialog("It's not very effective!");
     }
 
-    private void PlayerAction()
+    private void BattleOver(bool won)
     {
-        state = BattleState.PlayerAction;
+        state = BattleState.BattleOver;
+        playerParty.Kieszpots.ForEach(P => P.OnBattleOver());
+        OnBattleOver(won);
+    }
+
+    private void ActionSelection()
+    {
+        state = BattleState.ActionSelection;
         dialogBox.SetDialog("Choose an action");
         dialogBox.EnableActionSelector(true);
     }
@@ -159,9 +189,9 @@ public class BattleSystem : MonoBehaviour
         partyScreen.gameObject.SetActive(true);
     }
 
-    private void PlayerMove()
+    private void MoveSelection()
     {
-        state = BattleState.PlayerMove;
+        state = BattleState.MoveSelection;
         dialogBox.EnableActionSelector(false);
         dialogBox.EnableDialogText(false);
         dialogBox.EnableMoveSelector(true);
@@ -169,8 +199,8 @@ public class BattleSystem : MonoBehaviour
 
     public void HandleUpdate()
     {
-        if (state == BattleState.PlayerAction) HandleActionSelection();
-        else if (state == BattleState.PlayerMove) HandleMoveSelection();
+        if (state == BattleState.ActionSelection) HandleActionSelection();
+        else if (state == BattleState.MoveSelection) HandleMoveSelection();
         else if (state == BattleState.PartyScreen) HandlePartySelection();
     }
 
@@ -187,7 +217,7 @@ public class BattleSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (currentAction == 0) PlayerMove();
+            if (currentAction == 0) MoveSelection();
             else if (currentAction == 1) ; //Bag
             else if (currentAction == 2) OpenPartyScreen();
             else if (currentAction == 3) ; //Run
@@ -204,17 +234,21 @@ public class BattleSystem : MonoBehaviour
 
         dialogBox.UpdateMoveSelection(currentMove, playerUnit.Kieszpot.Moves[(KieszpotMoveName)currentMove]);
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (playerUnit.Kieszpot.Moves[(KieszpotMoveName)currentMove] != null)
         {
-            dialogBox.EnableMoveSelector(false);
-            dialogBox.EnableDialogText(true);
-            StartCoroutine(PerformPlayerMove());
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                dialogBox.EnableMoveSelector(false);
+                dialogBox.EnableDialogText(true);
+                StartCoroutine(PlayerMove());
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             dialogBox.EnableMoveSelector(false);
             dialogBox.EnableDialogText(true);
-            PlayerAction();
+            ActionSelection();
         }
     }
 
@@ -237,7 +271,7 @@ public class BattleSystem : MonoBehaviour
                 partyScreen.SendMessage("You can't battle with Kieszpot, which fainted!");
                 return;
             }
-            if(selectedMember == playerUnit.Kieszpot)
+            if (selectedMember == playerUnit.Kieszpot)
             {
                 partyScreen.SendMessage("You need to choose new Kieszpot!");
                 return;
@@ -256,23 +290,28 @@ public class BattleSystem : MonoBehaviour
             playerUnit.gameObject.SetActive(true);
             playerUnit.FaceKieszpot();
             enemyUnit.gameObject.SetActive(true);
-            state = BattleState.PlayerAction;
-            PlayerAction();
+            state = BattleState.ActionSelection;
+            ActionSelection();
         }
     }
 
     IEnumerator SwitchKieszpot(Kieszpot newKieszpot)
     {
-        yield return dialogBox.TypeDialog($"Come back {playerUnit.Kieszpot.Base.Name}");
-        playerUnit.animationController.PlayFaintAnimation();
-        yield return new WaitForSeconds(2f);
+        bool currentKieszpotFainted = true;
+        if (playerUnit.Kieszpot.HP > 0)
+        {
+            currentKieszpotFainted = false;
+            yield return dialogBox.TypeDialog($"Come back {playerUnit.Kieszpot.Base.Name}");
+            playerUnit.animationController.PlayFaintAnimation();
+            yield return new WaitForSeconds(2f);
+        }
 
         playerUnit.Setup(newKieszpot);
-        playerHud.SetData(newKieszpot);
         dialogBox.SetMoveNames(newKieszpot.Moves);
 
         yield return dialogBox.TypeDialog($"Go {newKieszpot.Base.Name}!");
 
-        StartCoroutine(EnemyMove());
+        if (currentKieszpotFainted) ChooseFirstTurn();
+        else StartCoroutine(EnemyMove());
     }
 }

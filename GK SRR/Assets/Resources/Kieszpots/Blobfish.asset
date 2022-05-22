@@ -33,6 +33,6 @@ MonoBehaviour:
   healMove:
     moveBase: {fileID: 0}
     level: 0
-  unknownMove:
-    moveBase: {fileID: 0}
-    level: 0
+  boostMove:
+    moveBase: {fileID: 11400000, guid: 0112d2dceb6e0314d8a6ccf924163902, type: 2}
+    level: 1

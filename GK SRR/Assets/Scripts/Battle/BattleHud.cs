@@ -22,6 +22,10 @@ public class BattleHud : MonoBehaviour
 
     public IEnumerator UpdateHP()
     {
-        yield return hpBar.SetHPAnimated((float)_kieszpot.HP / _kieszpot.MaxHp);
+        if (_kieszpot.HpChanged)
+        {
+            yield return hpBar.SetHPAnimated((float)_kieszpot.HP / _kieszpot.MaxHp);
+            _kieszpot.HpChanged = false;
+        }
     }
 }

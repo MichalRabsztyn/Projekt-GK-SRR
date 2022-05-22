@@ -30,7 +30,7 @@ public class KieszpotBase : ScriptableObject
     [SerializeField] LearnableMoves attackMove;
     [SerializeField] LearnableMoves specialAttackMove;
     [SerializeField] LearnableMoves healMove;
-    [SerializeField] LearnableMoves unknownMove;
+    [SerializeField] LearnableMoves boostMove;
     Dictionary<KieszpotMoveName, LearnableMoves> learnableMoves = null;
 
 
@@ -104,7 +104,7 @@ public class KieszpotBase : ScriptableObject
                 learnableMoves.Add(KieszpotMoveName.Attack, attackMove);
                 learnableMoves.Add(KieszpotMoveName.SpecialAttack, specialAttackMove);
                 learnableMoves.Add(KieszpotMoveName.Heal, healMove);
-                learnableMoves.Add(KieszpotMoveName.Unknown, unknownMove);
+                learnableMoves.Add(KieszpotMoveName.Boost, boostMove);
             }
 
             return learnableMoves;
@@ -121,6 +121,15 @@ public class LearnableMoves
 
     public MoveBase Base { get { return moveBase; } }
     public int Level { get { return level; } }
+}
+
+public enum Stat
+{
+    Attack,
+    Defense,
+    SpAttack,
+    SpDefense,
+    Speed
 }
 
 public enum Type
@@ -186,5 +195,5 @@ public enum KieszpotMoveName
     Attack = 0,
     SpecialAttack = 1,
     Heal = 2,
-    Unknown = 3
+    Boost = 3
 }

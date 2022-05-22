@@ -4,11 +4,17 @@ using DG.Tweening;
 [RequireComponent(typeof(BattleUnitAnimation))]
 public class BattleUnit : MonoBehaviour
 {
+    [Header("Reference")]
+    [SerializeField] BattleHud hud;
+
     [Header("Settings")]
     [SerializeField] bool isPlayerUnit;
 
     public Kieszpot Kieszpot { get; private set; }
     public BattleUnitAnimation animationController { get; private set; }
+    public bool IsPlayerUnit { get { return isPlayerUnit; } }
+
+    public BattleHud Hud { get { return hud; } }
 
     private void Awake()
     {
@@ -30,6 +36,8 @@ public class BattleUnit : MonoBehaviour
             animationController.SetFaceAnimation(true);
             animationController.PlayEnterAnimation(true);
         }
+
+        hud.SetData(kieszpot);
     }
 
     public void FaceKieszpot()
