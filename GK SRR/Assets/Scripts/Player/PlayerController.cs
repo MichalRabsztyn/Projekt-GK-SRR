@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,12 +14,16 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed;
     public LayerMask solidObjLayer;
     public LayerMask grassLayer;
+    public LayerMask messageLayer;
+
+    public Text message;
 
     public event Action OnEncountered;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        message = GetComponent<Text>();
     }
 
     public void HandleUpdate()
@@ -85,6 +90,14 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("isMoving", false);
                 OnEncountered();
             }
+        }
+    }
+
+    private void CheckForMessages()
+    {
+        if (Physics2D.OverlapCircle(transform.position, 0.2f, messageLayer) != null)
+        {
+            message.text = "I should not go there...";
         }
     }
 
