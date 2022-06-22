@@ -27,7 +27,7 @@ public class Kieszpot
     public Dictionary<Stat, int> StatBoosts { get; private set; }
 
     public Condition Status { get; private set; }
-
+    public int StatusTime { get; set; }
     public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
 
     public void Init()
@@ -156,7 +156,13 @@ public class Kieszpot
     public void SetStatus(ConditionID conditionID)
     {
         Status = ConditionsDB.Conditions[conditionID];
+        Status?.OnStart?.Invoke(this);
         StatusChanges.Enqueue($"{Base.Name} {Status.StartMessage}");
+    }
+
+    public void CureStatus()
+    {
+        Status = null;
     }
 
     public Move GetRandomMove(ref int id)
@@ -182,6 +188,12 @@ public class Kieszpot
             return returnMove;
         }
         return null;
+    }
+
+    public bool OnBeforeMove()
+    {
+        if (Status?.OnBeforeMove != null) return Status.OnBeforeMove(this);
+        return true;
     }
 
     public void OnAfterTurn()

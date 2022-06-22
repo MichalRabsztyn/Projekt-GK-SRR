@@ -80,6 +80,14 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator RunMove(BattleUnit sourceUnit, BattleUnit targetUnit, Move move)
     {
+        bool canRunMove = sourceUnit.Kieszpot.OnBeforeMove();
+        if (!canRunMove)
+        {
+            yield return ShowStatusChanges(sourceUnit.Kieszpot);
+            yield break;
+        }
+        yield return ShowStatusChanges(sourceUnit.Kieszpot);
+
         move.PP--;
 
         yield return dialogBox.TypeDialog($"{sourceUnit.Kieszpot.Base.Name} used {move.Base.Name}");

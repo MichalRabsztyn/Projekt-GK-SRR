@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ConditionsDB
 {
-      public static Dictionary<ConditionID, Condition> Conditions { get; set; } = new Dictionary<ConditionID, Condition>()
+    public static Dictionary<ConditionID, Condition> Conditions { get; set; } = new Dictionary<ConditionID, Condition>()
     {
         {
-            ConditionID.poison,
+            ConditionID.psn,
             new Condition()
             {
                 Name = "Poison",
@@ -20,7 +20,7 @@ public class ConditionsDB
             }
         },
         {
-            ConditionID.burn,
+            ConditionID.brn,
             new Condition()
             {
                 Name = "Burn",
@@ -31,12 +31,71 @@ public class ConditionsDB
                     kieszpot.StatusChanges.Enqueue($"{kieszpot.Base.Name} hurt itself due to burn");
                 }
             }
+        },
+        {
+            ConditionID.prl,
+            new Condition()
+            {
+                Name = "Paralyze",
+                StartMessage = "has been paralyzed!",
+                OnBeforeMove = (Kieszpot kieszpot) =>
+                {
+                    if(Random.Range(1, 5) == 1)
+                    {
+                        kieszpot.StatusChanges.Enqueue($"{kieszpot.Base.Name}'s paralyzed and can't move");
+                        return false;
+                    }
+                    return true;
+                }
+            }
+        },
+        {
+            ConditionID.frz,
+            new Condition()
+            {
+                Name = "Freeze",
+                StartMessage = "has been frozen",
+                OnBeforeMove = (Kieszpot kieszpot) =>
+                {
+                    if(Random.Range(1, 5) == 1)
+                    {
+                        kieszpot.CureStatus();
+                        kieszpot.StatusChanges.Enqueue($"{kieszpot.Base.Name}'s is not frozen anymore");
+                        return true;
+                    }
+                    return false;
+                }
+            }
+        },
+        {
+            ConditionID.slp,
+            new Condition()
+            {
+                Name = "Sleep",
+                StartMessage = "has fallen asleep",
+                OnStart = (Kieszpot kieszpot) =>
+                {
+                    kieszpot.StatusTime = Random.Range(1, 4);
+                    Debug.Log($"Will be asleep for {kieszpot.StatusTime} moves");
+                },
+                OnBeforeMove = (Kieszpot kieszpot) =>
+                {
+                    if(kieszpot.StatusTime <= 0)
+                    {
+                        kieszpot.CureStatus();
+                        kieszpot.StatusChanges.Enqueue($"{kieszpot.Base.Name} woke up!");
+                        return true;
+                    }
+                    kieszpot.StatusTime--;
+                    kieszpot.StatusChanges.Enqueue($"{kieszpot.Base.Name} is sleeping");
+                    return false;
+                }
+            }
         }
-
     };
 }
 
 public enum ConditionID
 {
-    none, poison, burn, sleep, paralized, freeze
+    none, psn, brn, slp, prl, frz
 }
