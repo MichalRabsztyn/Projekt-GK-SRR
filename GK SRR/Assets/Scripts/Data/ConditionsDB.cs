@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class ConditionsDB
 {
+    public static void Init()
+    {
+        foreach (var pair in Conditions)
+        {
+            var conditionId = pair.Key;
+            var condition = pair.Value;
+
+            condition.Id = conditionId;
+        }
+    }
+
     public static Dictionary<ConditionID, Condition> Conditions { get; set; } = new Dictionary<ConditionID, Condition>()
     {
         {
@@ -91,11 +102,39 @@ public class ConditionsDB
                     return false;
                 }
             }
+        },
+        {
+            ConditionID.confusion,
+            new Condition()
+            {
+                Name = "Confusion",
+                StartMessage = "has been confused",
+                OnStart = (Kieszpot kieszpot) =>
+                {
+                    kieszpot.VolatileStatusTime = Random.Range(1, 5);
+                    Debug.Log($"Will be confused for {kieszpot.VolatileStatusTime} moves");
+                },
+                OnBeforeMove = (Kieszpot kieszpot) =>
+                {
+                    if(kieszpot.VolatileStatusTime <= 0)
+                    {
+                        kieszpot.CureStatus();
+                        kieszpot.StatusChanges.Enqueue($"{kieszpot.Base.Name} kicked out of confusion!");
+                        return true;
+                    }
+                    kieszpot.VolatileStatusTime--;
+                    if(Random.Range(1, 3) == 1) return true;
+                    kieszpot.StatusChanges.Enqueue($"{kieszpot.Base.Name} is confused");
+                    kieszpot.UpdateHP(kieszpot.MaxHp / 8);
+                    kieszpot.StatusChanges.Enqueue($"It hurt itself due to confusion");
+                    return false;
+                }
+            }
         }
     };
 }
 
 public enum ConditionID
 {
-    none, psn, brn, slp, prl, frz
+    none, psn, brn, slp, prl, frz, confusion
 }

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,12 +22,17 @@ public class Kieszpot
     public bool HpChanged { get; set; }
 
     public Dictionary<KieszpotMoveName, Move> Moves { get; set; }
+    public Move CurrentMove { get; set; }
     public Dictionary<Stat, int> Stats { get; private set; }
     public Dictionary<Stat, int> StatBoosts { get; private set; }
 
     public Condition Status { get; private set; }
     public int StatusTime { get; set; }
+    public Condition VolatileStatus { get; set; }
+    public int VolatileStatusTime { get; set; }
     public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
+
+    public event System.Action OnStatusChange;
 
     public void Init()
     {
@@ -48,6 +52,8 @@ public class Kieszpot
         HP = MaxHp;
 
         ResetStatBoost();
+        Status = null;
+        VolatileStatus = null;
     }
 
     void CalculateStats()
@@ -60,7 +66,7 @@ public class Kieszpot
         Stats.Add(Stat.SpDefense, Mathf.FloorToInt((Base.SpDefence * Level) / 100.0f) + 5);
         Stats.Add(Stat.Speed, Mathf.FloorToInt((Base.Speed * Level) / 100.0f) + 5);
 
-        MaxHp = Mathf.FloorToInt((Base.MaxHp * Level) / 100.0f) + 10;
+        MaxHp = Mathf.FloorToInt((Base.MaxHp * Level) / 100.0f) + 10 + level;
     }
 
     void ResetStatBoost()
@@ -71,7 +77,9 @@ public class Kieszpot
             {Stat.Defense, 0 },
             {Stat.SpAttack, 0 },
             {Stat.SpDefense, 0 },
-            {Stat.Speed, 0 }
+            {Stat.Speed, 0 },
+            {Stat.Accuracy, 0 },
+            {Stat.Evasion, 0 }
         };
     }
 
@@ -155,14 +163,32 @@ public class Kieszpot
 
     public void SetStatus(ConditionID conditionID)
     {
+        if (Status != null) return;
+
         Status = ConditionsDB.Conditions[conditionID];
         Status?.OnStart?.Invoke(this);
         StatusChanges.Enqueue($"{Base.Name} {Status.StartMessage}");
+        OnStatusChange?.Invoke();
     }
 
     public void CureStatus()
     {
         Status = null;
+        OnStatusChange?.Invoke();
+    }
+
+    public void SetVolatileStatus(ConditionID conditionID)
+    {
+        if (VolatileStatus != null) return;
+
+        VolatileStatus = ConditionsDB.Conditions[conditionID];
+        VolatileStatus?.OnStart?.Invoke(this);
+        StatusChanges.Enqueue($"{Base.Name} {VolatileStatus.StartMessage}");
+    }
+
+    public void CureVolatileStatus()
+    {
+        VolatileStatus = null;
     }
 
     public Move GetRandomMove(ref int id)
@@ -192,24 +218,36 @@ public class Kieszpot
 
     public bool OnBeforeMove()
     {
-        if (Status?.OnBeforeMove != null) return Status.OnBeforeMove(this);
-        return true;
+        bool canPerformMove = true;
+        if (Status?.OnBeforeMove != null)
+        {
+            if (!Status.OnBeforeMove(this)) canPerformMove = false;
+        }
+
+        if (VolatileStatus?.OnBeforeMove != null)
+        {
+            if (!VolatileStatus.OnBeforeMove(this)) canPerformMove = false;
+        }
+
+        return canPerformMove;
     }
 
     public void OnAfterTurn()
     {
         Status?.OnAfterTurn?.Invoke(this);
+        VolatileStatus?.OnAfterTurn?.Invoke(this);
+    }
+
+    public void OnBattleOver()
+    {
+        VolatileStatus = null;
+        ResetStatBoost();
     }
 
     public void UpdateHP(int damage)
     {
         HP = Mathf.Clamp(HP - damage, 0, MaxHp);
         HpChanged = true;
-    }
-
-    public void OnBattleOver()
-    {
-        ResetStatBoost();
     }
 }
 

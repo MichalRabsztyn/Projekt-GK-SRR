@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BattleState { Start, ActionSelection, MoveSelection, PerformMove, Busy, PartyScreen, BattleOver }
+public enum BattleState { Start, ActionSelection, MoveSelection, Turn, Busy, PartyScreen, BattleOver }
+
+public enum BattleAction { Move, SwitchKieszpot, UseItem, Run}
 
 public class BattleSystem : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class BattleSystem : MonoBehaviour
     public event Action<bool> OnBattleOver;
 
     BattleState state;
+    BattleState? prevState;
     int currentAction;
     int currentMove;
     int currentMember;
@@ -41,41 +44,49 @@ public class BattleSystem : MonoBehaviour
 
         yield return dialogBox.TypeDialog($"A wild {enemyUnit.Kieszpot.Base.Name} appeared.");
 
-        ChooseFirstTurn();
+        ActionSelection();
     }
 
-    void ChooseFirstTurn()
+    private IEnumerator RunTurns(BattleAction playerAction)
     {
-        if (playerUnit.Kieszpot.Speed >= enemyUnit.Kieszpot.Speed) ActionSelection();
-        else StartCoroutine(EnemyMove());
-    }
-
-    private IEnumerator PlayerMove()
-    {
-        state = BattleState.PerformMove;
-        Move move = null;
-        move = playerUnit.Kieszpot.Moves[(KieszpotMoveName)currentMove];
-        yield return RunMove(playerUnit, enemyUnit, move);
-
-        if(state == BattleState.PerformMove) StartCoroutine(EnemyMove());
-    }
-
-    private IEnumerator EnemyMove()
-    {
-        state = BattleState.PerformMove;
+        state = BattleState.Turn;
         int enemyCurrentMove = 0;
-        Move move = null;
+        if (playerAction == BattleAction.Move)
+        {
+            playerUnit.Kieszpot.CurrentMove = playerUnit.Kieszpot.Moves[(KieszpotMoveName)currentMove];
+            enemyUnit.Kieszpot.CurrentMove = enemyUnit.Kieszpot.GetRandomMove(ref enemyCurrentMove);
+            bool firstMovePlayer = playerUnit.Kieszpot.Speed >= enemyUnit.Kieszpot.Speed;
+            var firstUnit = (firstMovePlayer) ? playerUnit : enemyUnit;
+            var secondUnit = (firstMovePlayer) ? enemyUnit : firstUnit;
+            var secondKieszpot = secondUnit.Kieszpot;
 
-        move = enemyUnit.Kieszpot.GetRandomMove(ref enemyCurrentMove);
-        if (move != null) 
-            yield return RunMove(enemyUnit, playerUnit, move);
+            yield return RunMove(firstUnit, secondUnit, firstUnit.Kieszpot.CurrentMove);
+            yield return RunAfterTurn(firstUnit);
+            if (state == BattleState.BattleOver) yield break;
+
+            if (secondKieszpot.HP > 0)
+            {
+                yield return RunMove(secondUnit, firstUnit, secondUnit.Kieszpot.CurrentMove);
+                yield return RunAfterTurn(secondUnit);
+                if (state == BattleState.BattleOver) yield break;
+            }
+        }
         else
         {
-            Debug.LogWarning($"Enemy unit {enemyUnit.name} has no possible moves!");
-            yield return null;
+            if(playerAction == BattleAction.SwitchKieszpot)
+            {
+                var selectedKieszpot = playerParty.Kieszpots[currentMember];
+                state = BattleState.Busy;
+                yield return SwitchKieszpot(selectedKieszpot);
+            }
+
+            var enemyMove = enemyUnit.Kieszpot.GetRandomMove(ref enemyCurrentMove);
+            yield return RunMove(enemyUnit, playerUnit, enemyMove);
+            yield return RunAfterTurn(enemyUnit);
+            if (state == BattleState.BattleOver) yield break;
         }
-        
-        if (state == BattleState.PerformMove) ActionSelection();
+
+        if (state != BattleState.BattleOver) ActionSelection();
     }
 
     IEnumerator RunMove(BattleUnit sourceUnit, BattleUnit targetUnit, Move move)
@@ -84,6 +95,7 @@ public class BattleSystem : MonoBehaviour
         if (!canRunMove)
         {
             yield return ShowStatusChanges(sourceUnit.Kieszpot);
+            yield return sourceUnit.Hud.UpdateHP();
             yield break;
         }
         yield return ShowStatusChanges(sourceUnit.Kieszpot);
@@ -92,31 +104,58 @@ public class BattleSystem : MonoBehaviour
 
         yield return dialogBox.TypeDialog($"{sourceUnit.Kieszpot.Base.Name} used {move.Base.Name}");
 
-        sourceUnit.animationController.PlayMoveAnimation((KieszpotMoveName)currentMove, true);
-        yield return new WaitForSeconds(0.5f);
-
-        targetUnit.animationController.PlayHitAnimation();
-
-        if(move.Base.Category == MoveCategory.Status)
+        if (CheckMoveHit(move, sourceUnit.Kieszpot, targetUnit.Kieszpot))
         {
-            yield return RunMoveEffects(move, sourceUnit.Kieszpot, targetUnit.Kieszpot);
-        }
-        else
-        {
-            var damageDetails = targetUnit.Kieszpot.TakeDamage(move, sourceUnit.Kieszpot);
-            yield return targetUnit.Hud.UpdateHP();
-            yield return ShowDamageDetails(damageDetails);
-        }
-            
 
-        if (targetUnit.Kieszpot.HP <= 0)
-        {
-            yield return dialogBox.TypeDialog($"{targetUnit.Kieszpot.Base.Name} fainted");
-            targetUnit.animationController.PlayFaintAnimation();
-            yield return new WaitForSeconds(2f);
+            sourceUnit.animationController.PlayMoveAnimation((KieszpotMoveName)currentMove, true);
+            yield return new WaitForSeconds(0.5f);
 
-            CheckForBattleOver(targetUnit);
+            targetUnit.animationController.PlayHitAnimation();
+
+            if (move.Base.Category == MoveCategory.Status)
+            {
+                yield return RunMoveEffects(move, sourceUnit.Kieszpot, targetUnit.Kieszpot);
+            }
+            else
+            {
+                var damageDetails = targetUnit.Kieszpot.TakeDamage(move, sourceUnit.Kieszpot);
+                yield return targetUnit.Hud.UpdateHP();
+                yield return ShowDamageDetails(damageDetails);
+            }
+
+
+            if (targetUnit.Kieszpot.HP <= 0)
+            {
+                yield return dialogBox.TypeDialog($"{targetUnit.Kieszpot.Base.Name} fainted");
+                targetUnit.animationController.PlayFaintAnimation();
+                yield return new WaitForSeconds(2f);
+
+                CheckForBattleOver(targetUnit);
+            }
         }
+        else yield return dialogBox.TypeDialog($"{sourceUnit.Kieszpot.Base.Name}'s attack missed");
+    }
+
+    IEnumerator RunMoveEffects(Move move, Kieszpot source, Kieszpot target)
+    {
+        var effects = move.Base.Effects;
+        if (effects.Boosts != null)
+        {
+            if (move.Base.Target == MoveTarget.Self) source.ApplyBoosts(effects.Boosts);
+            else target.ApplyBoosts(effects.Boosts);
+        }
+
+        if(effects.Status != ConditionID.none) target.SetStatus(effects.Status);
+        if(effects.VolatileStatus != ConditionID.none) target.SetVolatileStatus(effects.VolatileStatus);
+
+        yield return ShowStatusChanges(source);
+        yield return ShowStatusChanges(target);
+    }
+
+    IEnumerator RunAfterTurn(BattleUnit sourceUnit)
+    {
+        if (state == BattleState.BattleOver) yield break;
+        yield return new WaitUntil(() => state == BattleState.Turn);
 
         sourceUnit.Kieszpot.OnAfterTurn();
         yield return ShowStatusChanges(sourceUnit.Kieszpot);
@@ -132,19 +171,22 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    IEnumerator RunMoveEffects(Move move, Kieszpot source, Kieszpot target)
+    bool CheckMoveHit(Move move, Kieszpot sourceUnit, Kieszpot targetUnit)
     {
-        var effects = move.Base.Effects;
-        if (effects.Boosts != null)
-        {
-            if (move.Base.Target == MoveTarget.Self) source.ApplyBoosts(effects.Boosts);
-            else target.ApplyBoosts(effects.Boosts);
-        }
+        if (move.Base.AlwaysHits) return true;
 
-        if(effects.Status != ConditionID.none) target.SetStatus(effects.Status);
+        float moveAccuracy = move.Base.Accuracy;
+        int accuracy = sourceUnit.StatBoosts[Stat.Accuracy];
+        int evasion = sourceUnit.StatBoosts[Stat.Evasion];
+        var boostValues = new float[] { 1f, 1.5f, 2f, 2.5f, 3f, 3.5f, 4f };
 
-        yield return ShowStatusChanges(source);
-        yield return ShowStatusChanges(target);
+        if (accuracy > 0) moveAccuracy *= boostValues[accuracy];
+        else moveAccuracy /= boostValues[-accuracy];
+
+        if (evasion > 0) moveAccuracy /= boostValues[evasion];
+        else moveAccuracy *= boostValues[-evasion];
+
+        return UnityEngine.Random.Range(1, 101) <= moveAccuracy;
     }
 
     IEnumerator ShowStatusChanges(Kieszpot kieszpot)
@@ -227,7 +269,11 @@ public class BattleSystem : MonoBehaviour
         {
             if (currentAction == 0) MoveSelection();
             else if (currentAction == 1) ; //Bag
-            else if (currentAction == 2) OpenPartyScreen();
+            else if (currentAction == 2)
+            {
+                prevState = state;
+                OpenPartyScreen();
+            }
             else if (currentAction == 3) ; //Run
         }
     }
@@ -248,7 +294,7 @@ public class BattleSystem : MonoBehaviour
             {
                 dialogBox.EnableMoveSelector(false);
                 dialogBox.EnableDialogText(true);
-                StartCoroutine(PlayerMove());
+                StartCoroutine(RunTurns(BattleAction.Move));
             }
         }
         
@@ -289,8 +335,17 @@ public class BattleSystem : MonoBehaviour
             playerUnit.gameObject.SetActive(true);
             playerUnit.FaceKieszpot();
             enemyUnit.gameObject.SetActive(true);
-            state = BattleState.Busy;
-            StartCoroutine(SwitchKieszpot(selectedMember));
+
+            if (prevState == BattleState.ActionSelection)
+            {
+                prevState = null;
+                StartCoroutine(RunTurns(BattleAction.SwitchKieszpot));
+            }
+            else
+            {
+                state = BattleState.Busy;
+                StartCoroutine(SwitchKieszpot(selectedMember));
+            }
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -305,10 +360,8 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SwitchKieszpot(Kieszpot newKieszpot)
     {
-        bool currentKieszpotFainted = true;
         if (playerUnit.Kieszpot.HP > 0)
         {
-            currentKieszpotFainted = false;
             yield return dialogBox.TypeDialog($"Come back {playerUnit.Kieszpot.Base.Name}");
             playerUnit.animationController.PlayFaintAnimation();
             yield return new WaitForSeconds(2f);
@@ -319,7 +372,6 @@ public class BattleSystem : MonoBehaviour
 
         yield return dialogBox.TypeDialog($"Go {newKieszpot.Base.Name}!");
 
-        if (currentKieszpotFainted) ChooseFirstTurn();
-        else StartCoroutine(EnemyMove());
+        state = BattleState.Turn;
     }
 }
