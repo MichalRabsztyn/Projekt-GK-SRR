@@ -26,7 +26,7 @@ public class DialogManager : MonoBehaviour
 
     public bool isShowing { get; private set; }
 
-    public IEnumerator ShowDialog(Dialog dialog)
+    public IEnumerator  ShowDialog(Dialog dialog)
     {
         yield return new WaitForEndOfFrame();
 

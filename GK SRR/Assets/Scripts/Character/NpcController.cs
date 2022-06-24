@@ -21,11 +21,14 @@ public class NpcController : MonoBehaviour, Interactable
     public void Interact()
     {
         if (state == NPCState.Idle)
+        {
             StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+        }
     }
 
     private void Update()
     {
+
         if (DialogManager.Instance.isShowing) return;
 
         if (state == NPCState.Idle)

@@ -14,16 +14,13 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed;
     public LayerMask solidObjLayer;
     public LayerMask grassLayer;
-    public LayerMask messageLayer;
-
-    public Text message;
+    public LayerMask interactableLayer;
 
     public event Action OnEncountered;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        message = GetComponent<Text>();
     }
 
     public void HandleUpdate()
@@ -52,6 +49,19 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetBool("isMoving", isMoving);
+        if (Input.GetKeyDown(KeyCode.E)) Interact();
+    }
+
+    void Interact()
+    {
+        var facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+        var interactPos = transform.position + facingDir;
+
+        var collider = Physics2D.OverlapCircle(interactPos, 0.3f, interactableLayer);
+        if (collider != null)
+        {
+            collider.GetComponent<Interactable>()?.Interact();
+        }
     }
 
     IEnumerator Move(Vector3 targetPos)
@@ -74,7 +84,7 @@ public class PlayerController : MonoBehaviour
 
     private bool IsWalkable(Vector3 targetPos)
     {
-        if (Physics2D.OverlapCircle(targetPos, 0.1f, solidObjLayer) != null)
+        if (Physics2D.OverlapCircle(targetPos, 0.1f, solidObjLayer | interactableLayer) != null)
         {
             return false;
         }
@@ -92,13 +102,4 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
-    private void CheckForMessages()
-    {
-        if (Physics2D.OverlapCircle(transform.position, 0.2f, messageLayer) != null)
-        {
-            message.text = "I should not go there...";
-        }
-    }
-
 }
