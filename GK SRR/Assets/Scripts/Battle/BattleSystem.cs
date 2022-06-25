@@ -6,7 +6,7 @@ using UnityEngine;
 
 public enum BattleState { Start, ActionSelection, MoveSelection, Turn, Busy, PartyScreen, BattleOver }
 
-public enum BattleAction { Move, SwitchKieszpot, UseItem, Run}
+public enum BattleAction { Move, SwitchKieszpot, CatchKieszpot, Run}
 
 public class BattleSystem : MonoBehaviour
 {
@@ -24,6 +24,7 @@ public class BattleSystem : MonoBehaviour
     int currentAction;
     int currentMove;
     int currentMember;
+    int escapeAttempts;
 
     KieszpotParty playerParty;
     Kieszpot wildKieszpot;
@@ -46,6 +47,7 @@ public class BattleSystem : MonoBehaviour
 
         yield return dialogBox.TypeDialog($"A wild {enemyUnit.Kieszpot.Base.Name} appeared.");
 
+        escapeAttempts = 0;
         ActionSelection();
     }
 
@@ -81,10 +83,14 @@ public class BattleSystem : MonoBehaviour
                 state = BattleState.Busy;
                 yield return SwitchKieszpot(selectedKieszpot);
             }
-            else if(playerAction == BattleAction.UseItem)
+            else if(playerAction == BattleAction.CatchKieszpot)
             {
                 dialogBox.EnableActionSelector(false);
                 yield return ThrowKieszbox();
+            }
+            else if (playerAction == BattleAction.Run)
+            {
+                yield return EscapeBattle();
             }
 
             var enemyMove = enemyUnit.Kieszpot.GetRandomMove(ref enemyCurrentMove);
@@ -276,13 +282,13 @@ public class BattleSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             if (currentAction == 0) MoveSelection();
-            else if (currentAction == 1) StartCoroutine(RunTurns(BattleAction.UseItem));
+            else if (currentAction == 1) StartCoroutine(RunTurns(BattleAction.CatchKieszpot));
             else if (currentAction == 2)
             {
                 prevState = state;
                 OpenPartyScreen();
             }
-            else if (currentAction == 3) ; //Run
+            else if (currentAction == 3) StartCoroutine(RunTurns(BattleAction.Run));
         }
     }
     private void HandleMoveSelection()
@@ -450,5 +456,36 @@ public class BattleSystem : MonoBehaviour
         }
 
         return shakeCount;
+    }
+
+    IEnumerator EscapeBattle()
+    {
+        state = BattleState.Busy;
+        escapeAttempts++;
+
+        int playerSpeed = playerUnit.Kieszpot.Speed;
+        int enemySpeed = enemyUnit.Kieszpot.Speed;
+
+        if(enemySpeed < playerSpeed)
+        {
+            yield return dialogBox.TypeDialog($"Ran away safely!");
+            BattleOver(true);
+        }
+        else
+        {
+            float chance = (playerSpeed * 128) / enemySpeed + 30 * escapeAttempts;
+            chance = chance % 256;
+
+            if(UnityEngine.Random.Range(0, 256) < chance)
+            {
+                yield return dialogBox.TypeDialog($"Ran away safely!");
+                BattleOver(true);
+            }
+            else
+            {
+                yield return dialogBox.TypeDialog($"Player couldn't escape safely!");
+                state = BattleState.Turn;
+            }
+        }
     }
 }
