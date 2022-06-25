@@ -26,6 +26,7 @@ public class Kieszpot
         get { return level; }
     }
 
+    public int Exp { get; set; }
     public int HP { get; set; }
     public int MaxHp { get; private set; }
     public bool HpChanged { get; set; }
@@ -56,6 +57,8 @@ public class Kieszpot
 
             Moves.Add(move.Key, new Move(move.Value.Base));
         }
+
+        Exp = Base.GetExpForLevel(level);
 
         CalculateStats();
         HP = MaxHp;
@@ -201,13 +204,29 @@ public class Kieszpot
         VolatileStatus = null;
     }
 
+    public bool LevelUp()
+    {
+        if(Exp > Base.GetExpForLevel(Level + 1))
+        {
+            level++;
+            return true;
+        }
+
+        return false;
+    }
+
     public Move GetRandomMove(ref int id)
     {
         if (Moves.Count > 0)
         {
             int loopGuard = 0;
             Move returnMove = null;
-            var avaibleMoves = Moves.Where(m => m.Value.PP > 0).ToList();
+
+            List<Move> avaibleMoves = new List<Move>();
+            foreach(Move move in Moves.Values)
+            {
+               if(move != null && move.PP > 0) avaibleMoves.Add(move);
+            }
 
             while (returnMove == null)
             {

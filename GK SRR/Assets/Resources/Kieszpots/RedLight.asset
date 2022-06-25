@@ -21,7 +21,21 @@ MonoBehaviour:
   spAttack: 0
   spDefence: 0
   speed: 0
+  catchRate: 50
+  experienceYield: 50
+  growRate: 0
   description: 
   mainSprite: {fileID: 0}
-  animator: {fileID: 0}
-  learnableMoves: []
+  animatorController: {fileID: 0}
+  attackMove:
+    moveBase: {fileID: 0}
+    level: 0
+  specialAttackMove:
+    moveBase: {fileID: 0}
+    level: 0
+  healMove:
+    moveBase: {fileID: 0}
+    level: 0
+  boostMove:
+    moveBase: {fileID: 0}
+    level: 0

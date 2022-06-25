@@ -64,13 +64,13 @@ public class BattleSystem : MonoBehaviour
             var secondUnit = (firstMovePlayer) ? enemyUnit : firstUnit;
             var secondKieszpot = secondUnit.Kieszpot;
 
-            yield return RunMove(firstUnit, secondUnit, firstUnit.Kieszpot.CurrentMove);
+            yield return RunMove(firstUnit, secondUnit, firstUnit.Kieszpot.CurrentMove, firstUnit == playerUnit ? currentMove : enemyCurrentMove);
             yield return RunAfterTurn(firstUnit);
             if (state == BattleState.BattleOver) yield break;
 
             if (secondKieszpot.HP > 0)
             {
-                yield return RunMove(secondUnit, firstUnit, secondUnit.Kieszpot.CurrentMove);
+                yield return RunMove(secondUnit, firstUnit, secondUnit.Kieszpot.CurrentMove, secondUnit == playerUnit ? currentMove : enemyCurrentMove);
                 yield return RunAfterTurn(secondUnit);
                 if (state == BattleState.BattleOver) yield break;
             }
@@ -94,7 +94,7 @@ public class BattleSystem : MonoBehaviour
             }
 
             var enemyMove = enemyUnit.Kieszpot.GetRandomMove(ref enemyCurrentMove);
-            yield return RunMove(enemyUnit, playerUnit, enemyMove);
+            yield return RunMove(enemyUnit, playerUnit, enemyMove, enemyCurrentMove);
             yield return RunAfterTurn(enemyUnit);
             if (state == BattleState.BattleOver) yield break;
         }
@@ -102,7 +102,7 @@ public class BattleSystem : MonoBehaviour
         if (state != BattleState.BattleOver) ActionSelection();
     }
 
-    IEnumerator RunMove(BattleUnit sourceUnit, BattleUnit targetUnit, Move move)
+    IEnumerator RunMove(BattleUnit sourceUnit, BattleUnit targetUnit, Move move, int moveID)
     {
         bool canRunMove = sourceUnit.Kieszpot.OnBeforeMove();
 
@@ -121,7 +121,7 @@ public class BattleSystem : MonoBehaviour
         if (CheckMoveHit(move, sourceUnit.Kieszpot, targetUnit.Kieszpot))
         {
             bool isPlayer = sourceUnit == playerUnit;
-            sourceUnit.animationController.PlayMoveAnimation((KieszpotMoveName)currentMove, isPlayer);
+            sourceUnit.animationController.PlayMoveAnimation((KieszpotMoveName)moveID, isPlayer);
             yield return new WaitForSeconds(0.5f);
 
             targetUnit.animationController.PlayHitAnimation();
@@ -137,15 +137,7 @@ public class BattleSystem : MonoBehaviour
                 yield return ShowDamageDetails(damageDetails);
             }
 
-
-            if (targetUnit.Kieszpot.HP <= 0)
-            {
-                yield return dialogBox.TypeDialog($"{targetUnit.Kieszpot.Base.Name} fainted");
-                targetUnit.animationController.PlayFaintAnimation();
-                yield return new WaitForSeconds(2f);
-
-                CheckForBattleOver(targetUnit);
-            }
+            if (targetUnit.Kieszpot.HP <= 0) yield return HandleKieszpotFainted(targetUnit);
         }
         else yield return dialogBox.TypeDialog($"{sourceUnit.Kieszpot.Base.Name}'s attack missed");
     }
@@ -177,11 +169,8 @@ public class BattleSystem : MonoBehaviour
 
         if (sourceUnit.Kieszpot.HP <= 0)
         {
-            yield return dialogBox.TypeDialog($"{sourceUnit.Kieszpot.Base.Name} fainted");
-            sourceUnit.animationController.PlayFaintAnimation();
-            yield return new WaitForSeconds(2f);
-
-            CheckForBattleOver(sourceUnit);
+            yield return HandleKieszpotFainted(sourceUnit);
+            yield return new WaitUntil(() => state == BattleState.Turn);
         }
     }
 
@@ -375,6 +364,34 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    IEnumerator HandleKieszpotFainted(BattleUnit faintedUnit)
+    {
+        yield return dialogBox.TypeDialog($"{faintedUnit.Kieszpot.Base.Name} fainted");
+        faintedUnit.animationController.PlayFaintAnimation();
+        yield return new WaitForSeconds(2f);
+
+        if(!faintedUnit.IsPlayerUnit)
+        {
+            int expYield = faintedUnit.Kieszpot.Base.ExperienceYield;
+            int enemyLevel = faintedUnit.Kieszpot.Level;
+            int expGain = Mathf.FloorToInt(expYield * enemyLevel) / 7;
+            playerUnit.Kieszpot.Exp += expGain;
+            yield return dialogBox.TypeDialog($"{playerUnit.Kieszpot.Base.Name} gained {expGain} exp");
+            yield return playerUnit.Hud.SetExp(true);
+
+            while (playerUnit.Kieszpot.LevelUp())
+            {
+                playerUnit.Hud.SetLevel();
+                yield return dialogBox.TypeDialog($"{playerUnit.Kieszpot.Base.Name} gained {playerUnit.Kieszpot.Level} lvl!");
+                yield return playerUnit.Hud.SetExp(true, true);
+            }
+
+            yield return new WaitForSeconds(1f);
+        }
+
+        CheckForBattleOver(faintedUnit);
+    }
+
     IEnumerator SwitchKieszpot(Kieszpot newKieszpot)
     {
         if (playerUnit.Kieszpot.HP > 0)
@@ -428,7 +445,7 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(1f);
+            //yield return new WaitForSeconds(1f);
             kieszbox.DOFade(0, 1.5f);
             yield return enemyUnit.animationController.PlayBreakoutAnimation();
 

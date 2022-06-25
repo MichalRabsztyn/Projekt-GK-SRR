@@ -21,11 +21,25 @@ MonoBehaviour:
   spAttack: 10
   spDefence: 8
   speed: 6
+  catchRate: 50
+  experienceYield: 50
+  growRate: 0
   description: The Akkorokamui is a gigantic octopus-like monster - it is said that
     its enormus body can reach sized of up to 120 meters in length. She has craving
     that cannot be satisfied, which makes her fickle with the propensity to do harm.
     Akkorokamui's nature as an octopus means that it is persistent and it is near
     impossible to escape its grasp without permission.
   mainSprite: {fileID: 0}
-  animator: {fileID: 0}
-  learnableMoves: []
+  animatorController: {fileID: 0}
+  attackMove:
+    moveBase: {fileID: 0}
+    level: 0
+  specialAttackMove:
+    moveBase: {fileID: 0}
+    level: 0
+  healMove:
+    moveBase: {fileID: 0}
+    level: 0
+  boostMove:
+    moveBase: {fileID: 0}
+    level: 0

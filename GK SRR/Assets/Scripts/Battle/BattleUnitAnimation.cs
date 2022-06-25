@@ -167,7 +167,7 @@ public class BattleUnitAnimation : MonoBehaviour
         var sequence = DOTween.Sequence();
         sequence.Append(spriteRenderer.material.DOFade(1, 0.5f));
         sequence.Join(transform.DOLocalMoveY(orginalPosition.y, 0.5f));
-        sequence.Join(transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f));
+        sequence.Join(transform.DOScale(new Vector3(200f, 200f, 200f), 0.5f));
         yield return sequence.WaitForCompletion();
     }
 }

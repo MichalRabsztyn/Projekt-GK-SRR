@@ -21,6 +21,9 @@ MonoBehaviour:
   spAttack: 2
   spDefence: 2
   speed: 2
+  catchRate: 50
+  experienceYield: 50
+  growRate: 0
   description: 
   mainSprite: {fileID: -1343557822, guid: 3c9c70bb2cd183c439aeb868c8cd9300, type: 3}
   animatorController: {fileID: 9100000, guid: de9a0bb04be1f1541ae6ae41013d6234, type: 2}
