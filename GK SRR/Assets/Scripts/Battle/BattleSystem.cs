@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] BattleUnit enemyUnit;
     [SerializeField] BattleDialogBox dialogBox;
     [SerializeField] PartyScreen partyScreen;
+    [SerializeField] GameObject kieszboxSprite;
 
     public event Action<bool> OnBattleOver;
 
@@ -79,6 +81,11 @@ public class BattleSystem : MonoBehaviour
                 state = BattleState.Busy;
                 yield return SwitchKieszpot(selectedKieszpot);
             }
+            else if(playerAction == BattleAction.UseItem)
+            {
+                dialogBox.EnableActionSelector(false);
+                yield return ThrowKieszbox();
+            }
 
             var enemyMove = enemyUnit.Kieszpot.GetRandomMove(ref enemyCurrentMove);
             yield return RunMove(enemyUnit, playerUnit, enemyMove);
@@ -92,6 +99,7 @@ public class BattleSystem : MonoBehaviour
     IEnumerator RunMove(BattleUnit sourceUnit, BattleUnit targetUnit, Move move)
     {
         bool canRunMove = sourceUnit.Kieszpot.OnBeforeMove();
+
         if (!canRunMove)
         {
             yield return ShowStatusChanges(sourceUnit.Kieszpot);
@@ -106,8 +114,8 @@ public class BattleSystem : MonoBehaviour
 
         if (CheckMoveHit(move, sourceUnit.Kieszpot, targetUnit.Kieszpot))
         {
-
-            sourceUnit.animationController.PlayMoveAnimation((KieszpotMoveName)currentMove, true);
+            bool isPlayer = sourceUnit == playerUnit;
+            sourceUnit.animationController.PlayMoveAnimation((KieszpotMoveName)currentMove, isPlayer);
             yield return new WaitForSeconds(0.5f);
 
             targetUnit.animationController.PlayHitAnimation();
@@ -268,7 +276,7 @@ public class BattleSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             if (currentAction == 0) MoveSelection();
-            else if (currentAction == 1) ; //Bag
+            else if (currentAction == 1) StartCoroutine(RunTurns(BattleAction.UseItem));
             else if (currentAction == 2)
             {
                 prevState = state;
@@ -292,6 +300,9 @@ public class BattleSystem : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                var move = playerUnit.Kieszpot.Moves[(KieszpotMoveName)currentMove];
+                if (move.PP == 0) return;
+
                 dialogBox.EnableMoveSelector(false);
                 dialogBox.EnableDialogText(true);
                 StartCoroutine(RunTurns(BattleAction.Move));
@@ -373,5 +384,71 @@ public class BattleSystem : MonoBehaviour
         yield return dialogBox.TypeDialog($"Go {newKieszpot.Base.Name}!");
 
         state = BattleState.Turn;
+    }
+
+    IEnumerator ThrowKieszbox()
+    {
+        state = BattleState.Busy;
+
+        yield return dialogBox.TypeDialog($"Player used Kieszbox!");
+
+        Vector3 offsetInstance = new Vector3(2, 0);
+        Vector3 offsetJump = new Vector3(0, 2);
+        var kieszboxObj = Instantiate(kieszboxSprite, playerUnit.transform.position - offsetInstance, Quaternion.identity);
+        var kieszbox = kieszboxObj.GetComponent<SpriteRenderer>();
+
+        yield return kieszbox.transform.DOJump(enemyUnit.transform.position + offsetJump, 2f, 1, 1f).WaitForCompletion();
+        yield return enemyUnit.animationController.PlayCaptureAnimation();
+        yield return kieszbox.transform.DOLocalMoveY(enemyUnit.transform.position.y - 1, 0.5f).WaitForCompletion();
+
+        int shakeCount = CatchKieszpot(enemyUnit.Kieszpot);
+
+        for (int i = 0; i < Mathf.Min(shakeCount, 3); i++)
+        {
+            yield return new WaitForSeconds(0.5f);
+            yield return kieszbox.transform.DOPunchRotation(new Vector3(0, 0, 10f), 0.8f).WaitForCompletion();
+        }
+
+        if (shakeCount == 4)
+        {
+            yield return dialogBox.TypeDialog($"{enemyUnit.Kieszpot.Base.Name} was caught!");
+            yield return kieszbox.DOFade(0, 1.5f).WaitForCompletion();
+
+            playerParty.AddKieszpot(enemyUnit.Kieszpot);
+            yield return dialogBox.TypeDialog($"{enemyUnit.Kieszpot.Base.Name} was added to your party!");
+
+            Destroy(kieszbox);
+            BattleOver(true);
+        }
+        else
+        {
+            yield return new WaitForSeconds(1f);
+            kieszbox.DOFade(0, 1.5f);
+            yield return enemyUnit.animationController.PlayBreakoutAnimation();
+
+            if(shakeCount < 2) yield return dialogBox.TypeDialog($"{enemyUnit.Kieszpot.Base.Name} broke free!");
+            else yield return dialogBox.TypeDialog($"{enemyUnit.Kieszpot.Base.Name} was almost caught!");
+
+            Destroy(kieszbox);
+            state = BattleState.Turn;
+        }
+    }
+
+    int CatchKieszpot(Kieszpot kieszpot)
+    {
+        float a = (3 * kieszpot.MaxHp - 2 * kieszpot.HP) * kieszpot.Base.CatchRate * ConditionsDB.GetStatusBonus(kieszpot.Status) / (3 * kieszpot.MaxHp);
+
+        if (a >= 100) return 4;
+
+        float b = 1048560 / Mathf.Sqrt(Mathf.Sqrt(16711680 / a));
+
+        int shakeCount = 0;
+        while(shakeCount < 4)
+        {
+            if (UnityEngine.Random.Range(0, 65535) >= b) break;
+            shakeCount++;
+        }
+
+        return shakeCount;
     }
 }

@@ -34,7 +34,9 @@ public class GameController : MonoBehaviour
         var playerParty = playerController.GetComponent<KieszpotParty>();
         var wildKieszpot = FindObjectOfType<MapArea>().GetComponent<MapArea>().GetRandomWildKieszpot();
 
-        battleSystem.StartBattle(playerParty, wildKieszpot);
+        var wildKieszpotCopy = new Kieszpot(wildKieszpot.Base, wildKieszpot.Level);
+
+        battleSystem.StartBattle(playerParty, wildKieszpotCopy);
     }
 
     void EndBattle(bool playerWon)

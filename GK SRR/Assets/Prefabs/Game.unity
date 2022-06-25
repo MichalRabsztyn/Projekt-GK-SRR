@@ -173,6 +173,7 @@ MonoBehaviour:
   enemyUnit: {fileID: 1562538697322067248}
   dialogBox: {fileID: 1222812782}
   partyScreen: {fileID: 987277688}
+  kieszboxSprite: {fileID: 520069762157737575, guid: 5eb661fd60ddc1d4f9bf15db41fcfef4, type: 3}
 --- !u!1 &29751554
 GameObject:
   m_ObjectHideFlags: 0
@@ -5320,8 +5321,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 640.222, y: -720}
-  m_SizeDelta: {x: 1280.444, y: 170}
+  m_AnchoredPosition: {x: 639.6499, y: -720}
+  m_SizeDelta: {x: 1279.2998, y: 170}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1222812780
 MonoBehaviour:
@@ -6263,7 +6264,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: 542561313
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &1488472874
@@ -6674,8 +6675,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 640.222, y: 0}
-  m_SizeDelta: {x: 1280.444, y: 550}
+  m_AnchoredPosition: {x: 639.6499, y: 0}
+  m_SizeDelta: {x: 1279.2998, y: 550}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1715558815
 MonoBehaviour:
@@ -21350,6 +21351,18 @@ PrefabInstance:
       propertyPath: orginalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1562538698810229943, guid: 1ce449234f5f94a4595bcc6265dadbb6, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562538698810229943, guid: 1ce449234f5f94a4595bcc6265dadbb6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562538698810229943, guid: 1ce449234f5f94a4595bcc6265dadbb6, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 542561313
+      objectReference: {fileID: 0}
     - target: {fileID: 1562538698810229945, guid: 1ce449234f5f94a4595bcc6265dadbb6, type: 3}
       propertyPath: hud
       value: 
@@ -22114,6 +22127,18 @@ PrefabInstance:
       propertyPath: hud
       value: 
       objectReference: {fileID: 1564062133}
+    - target: {fileID: 5243796865600181164, guid: e138984abba6676489c030a68edc94aa, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5243796865600181164, guid: e138984abba6676489c030a68edc94aa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5243796865600181164, guid: e138984abba6676489c030a68edc94aa, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 542561313
+      objectReference: {fileID: 0}
     - target: {fileID: 5243796865600181167, guid: e138984abba6676489c030a68edc94aa, type: 3}
       propertyPath: orginalPosition.x
       value: 0

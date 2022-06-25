@@ -27,4 +27,13 @@ public class KieszpotParty : MonoBehaviour
     {
         return kieszpots.Where(x => x.HP > 0).FirstOrDefault();
     }
+
+    public void AddKieszpot(Kieszpot caughtKieszpot)
+    {
+        if(kieszpots.Count < 8) kieszpots.Add(caughtKieszpot);
+        else
+        {
+            ;
+        }
+    }
 }

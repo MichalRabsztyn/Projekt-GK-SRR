@@ -71,11 +71,11 @@ public class BattleDialogBox : MonoBehaviour
             else moveTexts[i].color = Color.black;
         }
 
-        if (move != null)
-        {
-            movePPText.text = $"PP {move.PP}/{move.Base.PP}";
-            typeText.text = move.Base.Type.ToString();
-        }
+        movePPText.text = $"PP {move.PP}/{move.Base.PP}";
+        typeText.text = move.Base.Type.ToString();
+
+        if (move.PP == 0) movePPText.color = Color.red;
+        else movePPText.color = Color.black;
     }
 
     public void SetMoveNames(Dictionary<KieszpotMoveName, Move> moves)

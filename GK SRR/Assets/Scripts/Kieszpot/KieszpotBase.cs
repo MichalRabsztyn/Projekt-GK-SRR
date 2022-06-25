@@ -18,6 +18,7 @@ public class KieszpotBase : ScriptableObject
     [Range(1, 10)] [SerializeField] int spAttack;
     [Range(1, 10)] [SerializeField] int spDefence;
     [Range(1, 10)] [SerializeField] int speed;
+    [Range(1, 100)] [SerializeField] int catchRate = 50;
 
     [Space]
     [TextArea(15, 20)] [SerializeField] string description;
@@ -84,6 +85,11 @@ public class KieszpotBase : ScriptableObject
         get { return speed; }
     }
 
+    public int CatchRate
+    {
+        get { return catchRate; }
+    }
+
     public Sprite MainSprite
     {
         get { return mainSprite; }
@@ -110,8 +116,6 @@ public class KieszpotBase : ScriptableObject
             return learnableMoves;
         }
     }
-
-
 }
 [System.Serializable]
 public class LearnableMoves

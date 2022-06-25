@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -6,6 +7,14 @@ public class Kieszpot
 {
     [SerializeField] KieszpotBase _base;
     [SerializeField] int level;
+
+    public Kieszpot(KieszpotBase kieszpotBase, int kieszpotLevel)
+    {
+        _base = kieszpotBase;
+        level = kieszpotLevel;
+
+        Init();
+    }
 
     public KieszpotBase Base
     {
@@ -30,7 +39,7 @@ public class Kieszpot
     public int StatusTime { get; set; }
     public Condition VolatileStatus { get; set; }
     public int VolatileStatusTime { get; set; }
-    public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
+    public Queue<string> StatusChanges { get; private set; }
 
     public event System.Action OnStatusChange;
 
@@ -51,6 +60,7 @@ public class Kieszpot
         CalculateStats();
         HP = MaxHp;
 
+        StatusChanges = new Queue<string>();
         ResetStatBoost();
         Status = null;
         VolatileStatus = null;
@@ -197,6 +207,7 @@ public class Kieszpot
         {
             int loopGuard = 0;
             Move returnMove = null;
+            var avaibleMoves = Moves.Where(m => m.Value.PP > 0).ToList();
 
             while (returnMove == null)
             {
@@ -206,7 +217,7 @@ public class Kieszpot
                 }
 
                 loopGuard++;
-                int random = Random.Range(0, Moves.Count - 1);
+                int random = Random.Range(0, avaibleMoves.Count - 1);
                 id = random;
                 returnMove = Moves[(KieszpotMoveName)random];
             }
