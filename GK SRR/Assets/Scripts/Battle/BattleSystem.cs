@@ -124,14 +124,19 @@ public class BattleSystem : MonoBehaviour
             sourceUnit.animationController.PlayMoveAnimation((KieszpotMoveName)moveID, isPlayer);
             yield return new WaitForSeconds(0.5f);
 
-            targetUnit.animationController.PlayHitAnimation();
-
             if (move.Base.Category == MoveCategory.Status)
             {
+                targetUnit.animationController.PlayHitAnimation();
                 yield return RunMoveEffects(move, sourceUnit.Kieszpot, targetUnit.Kieszpot);
+            }
+            else if(move.Base.Category == MoveCategory.Heal)
+            {
+               yield return RunMoveHeal(move, sourceUnit.Kieszpot);
+               yield return sourceUnit.Hud.UpdateHP();
             }
             else
             {
+                targetUnit.animationController.PlayHitAnimation();
                 var damageDetails = targetUnit.Kieszpot.TakeDamage(move, sourceUnit.Kieszpot);
                 yield return targetUnit.Hud.UpdateHP();
                 yield return ShowDamageDetails(damageDetails);
@@ -156,6 +161,19 @@ public class BattleSystem : MonoBehaviour
 
         yield return ShowStatusChanges(source);
         yield return ShowStatusChanges(target);
+    }
+
+    IEnumerator RunMoveHeal(Move move, Kieszpot kieszpot)
+    {
+        int healBoost = UnityEngine.Random.Range(25, 100);
+        int hpBonus = kieszpot.HP * healBoost / 100;
+        int newHP = kieszpot.HP + hpBonus;
+
+        if (newHP > kieszpot.MaxHp) kieszpot.UpdateHP(-kieszpot.MaxHp);
+        else kieszpot.UpdateHP(-(newHP));
+
+        kieszpot.StatusChanges.Enqueue($"{kieszpot.Base.Name}'s HP gone up by {hpBonus} points!");
+        yield return null;
     }
 
     IEnumerator RunAfterTurn(BattleUnit sourceUnit)

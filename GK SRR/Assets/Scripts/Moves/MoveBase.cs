@@ -9,10 +9,10 @@ public class MoveBase : ScriptableObject
     [TextArea] [SerializeField] string description;
 
     [SerializeField] Type type;
-    [SerializeField] int power;
-    [SerializeField] int accuracy;
+    [Range(1, 100)] [SerializeField] int power;
+    [Range(1, 100)] [SerializeField] int accuracy;
     [SerializeField] bool alwaysHits;
-    [SerializeField] int pp;
+    [Range(1, 10)] [SerializeField] int pp;
     [SerializeField] MoveCategory category;
     [SerializeField] MoveEffects effects;
     [SerializeField] MoveTarget target;
@@ -100,7 +100,7 @@ public class StatBoost
 
 public enum MoveCategory
 {
-    Physical, Special, Status
+    Physical, Special, Status, Heal
 }
 
 public enum MoveTarget

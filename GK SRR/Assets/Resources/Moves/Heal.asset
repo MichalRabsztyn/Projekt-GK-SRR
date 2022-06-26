@@ -10,18 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74d0d71626999b04d9fff2c4bbc9c2b3, type: 3}
-  m_Name: Blobfish_Rain
+  m_Name: Heal
   m_EditorClassIdentifier: 
-  name: Rain
+  name: 
   description: 
-  type: 11
-  power: 28
-  accuracy: 12
-  alwaysHits: 1
-  pp: 2
-  category: 0
-  effects:
-    boosts: []
-    status: 0
-    volatileStatus: 0
-  target: 0
+  type1: 0
+  power: 0
+  accuracy: 0
+  pp: 0

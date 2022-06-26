@@ -71,7 +71,7 @@ public class BattleUnitAnimation : MonoBehaviour
                 break;
 
             case KieszpotMoveName.Heal:
-                Debug.LogWarning("Animation controller doesn't support Heal move yet!");
+                StartCoroutine(PlayJumpAnimation());
                 break;
 
             case KieszpotMoveName.Boost:
@@ -118,10 +118,10 @@ public class BattleUnitAnimation : MonoBehaviour
         animator.SetBool(attackAnimationName, false);
     }
 
-    void PlayJumpAnimation()
+    private IEnumerator PlayJumpAnimation()
     {
-        var sequence = DOTween.Sequence();
-        sequence.Append(transform.DOLocalMoveY(orginalPosition.y + 25f, 0.25f));
+        yield return new WaitForSeconds(0.5f);
+        yield return transform.DOPunchRotation(new Vector3(0, 0, 10f), 0.8f).WaitForCompletion();
     }
 
     void PlayMoveXAnimation(bool isPlayerUnit)
