@@ -19,6 +19,9 @@ public class KieszpotBase : ScriptableObject
     [Range(1, 10)] [SerializeField] int spDefence;
     [Range(1, 10)] [SerializeField] int speed;
     [Range(1, 100)] [SerializeField] int catchRate = 50;
+    [SerializeField] int experienceYield;
+    [SerializeField] GrowRate growRate;
+
 
     [Space]
     [TextArea(15, 20)] [SerializeField] string description;
@@ -35,70 +38,21 @@ public class KieszpotBase : ScriptableObject
     Dictionary<KieszpotMoveName, LearnableMoves> learnableMoves = null;
 
 
-    public string Name
-    {
-        get { return name; }
-    }
-
-    public string Description
-    {
-        get { return description; }
-    }
-
-    public Type Type1
-    {
-        get { return type1; }
-    }
-
-    public Type Type2
-    {
-        get { return type2; }
-    }
-
-    public int MaxHp
-    {
-        get { return maxHp; }
-    }
-
-    public int Attack
-    {
-        get { return attack; }
-    }
-
-    public int Defence
-    {
-        get { return defence; }
-    }
-
-    public int SpAttack
-    {
-        get { return spAttack; }
-    }
-
-    public int SpDefence
-    {
-        get { return spDefence; }
-    }
-
-    public int Speed
-    {
-        get { return speed; }
-    }
-
-    public int CatchRate
-    {
-        get { return catchRate; }
-    }
-
-    public Sprite MainSprite
-    {
-        get { return mainSprite; }
-    }
-
-    public AnimatorController AnimatorController
-    {
-        get { return animatorController; }
-    }
+    public string Name => name;
+    public string Description => description;
+    public Type Type1 => type1;
+    public Type Type2 => type2;
+    public int MaxHp => maxHp;
+    public int Attack => attack;
+    public int Defence => defence;
+    public int SpAttack => spAttack;
+    public int SpDefence => spDefence;
+    public int Speed => speed;
+    public int CatchRate => catchRate;
+    public int ExperienceYield => experienceYield;
+    public GrowRate GrowRate => growRate;
+    public Sprite MainSprite => mainSprite;
+    public AnimatorController AnimatorController => animatorController;
 
     public Dictionary<KieszpotMoveName, LearnableMoves> LearnableMoves
     {
@@ -116,7 +70,15 @@ public class KieszpotBase : ScriptableObject
             return learnableMoves;
         }
     }
+
+    public int GetExpForLevel(int level)
+    {
+        if (growRate == GrowRate.Fast) return 4 * (level * level * level) / 5;
+        else if (growRate == GrowRate.Medium) return level * level * level;
+        return -1;
+    }
 }
+
 [System.Serializable]
 public class LearnableMoves
 {
@@ -159,6 +121,11 @@ public enum Type
     Dark,
     Steel,
     Fairy
+}
+
+public enum GrowRate
+{
+    Fast, Medium, Slow
 }
 
 public class TypeChart

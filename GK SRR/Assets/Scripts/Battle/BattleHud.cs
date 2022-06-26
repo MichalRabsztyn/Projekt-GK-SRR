@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 public class BattleHud : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class BattleHud : MonoBehaviour
     [SerializeField] TMP_Text levelText;
     [SerializeField] TMP_Text statusText;
     [SerializeField] HPBar hpBar;
+    [SerializeField] GameObject expBar;
 
     [Header("Status' colors")]
     [SerializeField] Color poisonColor;
@@ -25,8 +27,9 @@ public class BattleHud : MonoBehaviour
     {
         _kieszpot = kieszpot;
         nameText.text = kieszpot.Base.Name;
-        levelText.text = "Lvl " + kieszpot.Level;
+        SetLevel();
         hpBar.SetHP((float) kieszpot.HP / kieszpot.MaxHp);
+        StartCoroutine(SetExp(false));
 
         statusColors = new Dictionary<ConditionID, Color>()
         {
@@ -49,6 +52,31 @@ public class BattleHud : MonoBehaviour
             statusText.text = _kieszpot.Status.Id.ToString().ToUpper();
             statusText.color = statusColors[_kieszpot.Status.Id];
         }
+    }
+
+    public IEnumerator SetExp(bool isSmooth, bool reset = false)
+    {
+        if (expBar == null) yield break;
+
+        if (reset) expBar.transform.localScale = new Vector3(0, 1, 1);
+
+        float normalizedExp = GetNormalizedExp();
+        if (!isSmooth) expBar.transform.localScale = new Vector3(normalizedExp, 1, 1);
+        else yield return expBar.transform.DOScaleX(normalizedExp, 1.5f).WaitForCompletion();
+    }
+
+    float GetNormalizedExp()
+    {
+        int currentLevelExp = _kieszpot.Base.GetExpForLevel(_kieszpot.Level);
+        int nextLevelExp = _kieszpot.Base.GetExpForLevel(_kieszpot.Level + 1);
+
+        float normalizedExp = (float)(_kieszpot.Exp - currentLevelExp) / (nextLevelExp - currentLevelExp);
+        return Mathf.Clamp01(normalizedExp);
+    }
+
+    public void SetLevel()
+    {
+        levelText.text = "Lvl " + _kieszpot.Level;
     }
 
     public IEnumerator UpdateHP()

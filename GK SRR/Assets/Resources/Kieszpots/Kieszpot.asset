@@ -21,6 +21,21 @@ MonoBehaviour:
   spAttack: 0
   spDefence: 0
   speed: 0
+  catchRate: 50
+  experienceYield: 50
+  growRate: 0
   description: 
-  frontSprite: {fileID: -1336985846, guid: 046886eb1c7b23748a6fecd2fd1c528a, type: 3}
-  backSprite: {fileID: -1775883479, guid: 046886eb1c7b23748a6fecd2fd1c528a, type: 3}
+  mainSprite: {fileID: 0}
+  animatorController: {fileID: 0}
+  attackMove:
+    moveBase: {fileID: 0}
+    level: 0
+  specialAttackMove:
+    moveBase: {fileID: 0}
+    level: 0
+  healMove:
+    moveBase: {fileID: 0}
+    level: 0
+  boostMove:
+    moveBase: {fileID: 0}
+    level: 0

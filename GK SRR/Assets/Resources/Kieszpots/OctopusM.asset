@@ -21,9 +21,23 @@ MonoBehaviour:
   spAttack: 3
   spDefence: 5
   speed: 3
+  catchRate: 50
+  experienceYield: 50
+  growRate: 0
   description: Dr. Otto Gunther Octavius, also known as Doc Ock is highly intelligent
     optopus. After lost of his eye, he turned to a life of crime. He has stange obssesion
     with Akkorokamui, the Pink Wrath.
   mainSprite: {fileID: 0}
-  animator: {fileID: 0}
-  learnableMoves: []
+  animatorController: {fileID: 0}
+  attackMove:
+    moveBase: {fileID: 0}
+    level: 0
+  specialAttackMove:
+    moveBase: {fileID: 0}
+    level: 0
+  healMove:
+    moveBase: {fileID: 0}
+    level: 0
+  boostMove:
+    moveBase: {fileID: 0}
+    level: 0

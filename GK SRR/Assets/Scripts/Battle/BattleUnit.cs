@@ -26,7 +26,7 @@ public class BattleUnit : MonoBehaviour
         Kieszpot = kieszpot;
         animationController.Setup(Kieszpot.Base.AnimatorController);
 
-        transform.localScale = new Vector3(1, 1, 1);
+        transform.localScale = new Vector3(200, 200, 200);
 
         if (isPlayerUnit)
         {
