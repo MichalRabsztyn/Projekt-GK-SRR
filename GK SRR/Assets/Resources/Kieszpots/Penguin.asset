@@ -15,27 +15,27 @@ MonoBehaviour:
   name: Penguin
   type1: 6
   type2: 16
-  maxHp: 0
-  attack: 0
-  defence: 0
-  spAttack: 0
-  spDefence: 0
-  speed: 0
-  catchRate: 50
-  experienceYield: 50
-  growRate: 0
+  maxHp: 3500
+  attack: 28
+  defence: 28
+  spAttack: 8
+  spDefence: 7
+  speed: 9
+  catchRate: 25
+  experienceYield: 177
+  growRate: 1
   description: 
-  mainSprite: {fileID: 0}
-  animatorController: {fileID: 0}
+  mainSprite: {fileID: 1008760074, guid: 6e129f3811be0fc4aadacd6294de8c73, type: 3}
+  animatorController: {fileID: 9100000, guid: 757b38dac1b574c489f2fd8eeed3e4d3, type: 2}
   attackMove:
-    moveBase: {fileID: 0}
-    level: 0
+    moveBase: {fileID: 11400000, guid: 17cb74511d3aaf647a956427e0e73458, type: 2}
+    level: 1
   specialAttackMove:
-    moveBase: {fileID: 0}
-    level: 0
+    moveBase: {fileID: 11400000, guid: 7124ca4676a14d84bbb0fcbbba3de073, type: 2}
+    level: 6
   healMove:
-    moveBase: {fileID: 0}
-    level: 0
+    moveBase: {fileID: 11400000, guid: bb159aa1e64361540a28fb9151a28b5f, type: 2}
+    level: 1
   boostMove:
-    moveBase: {fileID: 0}
-    level: 0
+    moveBase: {fileID: 11400000, guid: 3c81b4348f5d3374fb5f396d74be9b1c, type: 2}
+    level: 7

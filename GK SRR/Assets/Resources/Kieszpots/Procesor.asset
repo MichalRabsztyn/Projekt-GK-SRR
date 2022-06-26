@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da774ec96db90c49984f296c6821247, type: 3}
+  m_Name: Procesor
+  m_EditorClassIdentifier: 
+  name: Z80
+  type1: 4
+  type2: 17
+  maxHp: 2137
+  attack: 11
+  defence: 7
+  spAttack: 2
+  spDefence: 2
+  speed: 2
+  catchRate: 25
+  experienceYield: 155
+  growRate: 0
+  description: 
+  mainSprite: {fileID: -1402245444, guid: ea49307c0962bd84f88417d52970fbd3, type: 3}
+  animatorController: {fileID: 9100000, guid: 091c619b7e72ac24aabf44c644fc206a, type: 2}
+  attackMove:
+    moveBase: {fileID: 11400000, guid: 0dd905714e1d49240acbd98531b75b79, type: 2}
+    level: 1
+  specialAttackMove:
+    moveBase: {fileID: 11400000, guid: 976f7cc04f0c1d747b3f608b1fa8862e, type: 2}
+    level: 6
+  healMove:
+    moveBase: {fileID: 11400000, guid: bb159aa1e64361540a28fb9151a28b5f, type: 2}
+    level: 1
+  boostMove:
+    moveBase: {fileID: 11400000, guid: f9da30a583fc6b5418541e24195003cd, type: 2}
+    level: 7

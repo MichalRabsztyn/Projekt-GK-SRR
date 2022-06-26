@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: In_Front
+      name: Octopus F Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c73235d1b89807746af83002cafd294d
-      internalID: 257007669
+      spriteID: 46f91d6d4d08c9b4490e3d07d47a0d9a
+      internalID: -2126433783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Out_Front
+      name: Octopus F Idle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89bd02f23513db94e89f4f3d459e4196
-      internalID: -1651822663
+      spriteID: a096829558231ac4586995af8f98a785
+      internalID: 806387262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: In_Back
+      name: Octopus F Idle_2
       rect:
         serializedVersion: 2
         x: 0
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8952f397697858a42910cd3afb460e8a
-      internalID: -459817397
+      spriteID: 2f414a7c5a1703c4abd3e437eb87c6de
+      internalID: 34972539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Out_Back
+      name: Octopus F Idle_3
       rect:
         serializedVersion: 2
         x: 32
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1fbee33091f1854fae7a94eba9de615
-      internalID: -285139668
+      spriteID: 7942b349bc1a2814ca9cbcb659e440b6
+      internalID: 1964865993
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      In_Back: -459817397
-      Out_Front: -1651822663
-      In_Front: 257007669
-      Out_Back: -285139668
+      Octopus F Idle_0: -2126433783
+      Octopus F Idle_3: 1964865993
+      Octopus F Idle_1: 806387262
+      Octopus F Idle_2: 34972539
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

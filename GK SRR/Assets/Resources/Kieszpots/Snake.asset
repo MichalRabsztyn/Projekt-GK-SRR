@@ -37,10 +37,10 @@ MonoBehaviour:
     level: 1
   specialAttackMove:
     moveBase: {fileID: 11400000, guid: 4ae824e8da72e1c41b513aa25a5274bf, type: 2}
-    level: 2
+    level: 4
   healMove:
-    moveBase: {fileID: 0}
-    level: 0
-  boostMove:
-    moveBase: {fileID: 11400000, guid: ee6585fda6cc73b41b21ca4beebed799, type: 2}
+    moveBase: {fileID: 11400000, guid: bb159aa1e64361540a28fb9151a28b5f, type: 2}
     level: 1
+  boostMove:
+    moveBase: {fileID: 11400000, guid: d69a26dd0a2236d468e652342e485cae, type: 2}
+    level: 6

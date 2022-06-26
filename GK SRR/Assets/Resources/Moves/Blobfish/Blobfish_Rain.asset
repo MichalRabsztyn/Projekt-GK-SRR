@@ -15,10 +15,10 @@ MonoBehaviour:
   name: Rain
   description: 
   type: 11
-  power: 28
-  accuracy: 12
-  alwaysHits: 1
-  pp: 2
+  power: 30
+  accuracy: 25
+  alwaysHits: 0
+  pp: 10
   category: 0
   effects:
     boosts: []

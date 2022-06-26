@@ -15,8 +15,8 @@ MonoBehaviour:
   name: Strom
   description: 
   type: 4
-  power: 30
-  accuracy: 8
+  power: 40
+  accuracy: 50
   alwaysHits: 1
   pp: 3
   category: 0

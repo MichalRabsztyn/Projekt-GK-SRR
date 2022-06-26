@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Gun
   description: 
-  type: 7
-  power: 100
-  accuracy: 5
-  alwaysHits: 1
+  type: 8
+  power: 45
+  accuracy: 30
+  alwaysHits: 0
   pp: 3
-  category: 0
+  category: 1
   effects:
     boosts: []
     status: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Blobfish
   type1: 4
   type2: 11
-  maxHp: 200
+  maxHp: 2000
   attack: 20
   defence: 30
   spAttack: 2
@@ -25,17 +25,17 @@ MonoBehaviour:
   experienceYield: 66
   growRate: 1
   description: 
-  mainSprite: {fileID: -1343557822, guid: 3c9c70bb2cd183c439aeb868c8cd9300, type: 3}
+  mainSprite: {fileID: 255157729, guid: 3c9c70bb2cd183c439aeb868c8cd9300, type: 3}
   animatorController: {fileID: 9100000, guid: de9a0bb04be1f1541ae6ae41013d6234, type: 2}
   attackMove:
     moveBase: {fileID: 11400000, guid: 50f9a9eb3971fd949a638382635c16e1, type: 2}
-    level: 2
+    level: 1
   specialAttackMove:
     moveBase: {fileID: 11400000, guid: d2162676f2cf14b409072d157127f5d7, type: 2}
-    level: 3
+    level: 2
   healMove:
-    moveBase: {fileID: 0}
-    level: 0
-  boostMove:
-    moveBase: {fileID: 11400000, guid: 0112d2dceb6e0314d8a6ccf924163902, type: 2}
+    moveBase: {fileID: 11400000, guid: bb159aa1e64361540a28fb9151a28b5f, type: 2}
     level: 1
+  boostMove:
+    moveBase: {fileID: 11400000, guid: d08d4c0c6af95894487f2357de15fa33, type: 2}
+    level: 5

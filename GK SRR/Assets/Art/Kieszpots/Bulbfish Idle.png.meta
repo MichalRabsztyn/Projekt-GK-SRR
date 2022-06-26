@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Inhale_Front
+      name: Bulbfish Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b90460b1b0aac0c48bc54c18e8100408
-      internalID: -1343557822
+      spriteID: 782530dfe1aa89d4eafee45228f2cfba
+      internalID: 255157729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Exhale_Front
+      name: Bulbfish Idle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b009396449d69cb489e800174fbbd210
-      internalID: -807406225
+      spriteID: 1ffdd26f2ad6c354c8921b0377884299
+      internalID: -1560623388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inhale_Back
+      name: Bulbfish Idle_2
       rect:
         serializedVersion: 2
         x: 0
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3d9b8da37c5b6f48a75caaff6d14be2
-      internalID: -1540389685
+      spriteID: b9d0dca4e4303cc458b3af568d13bfe8
+      internalID: 586942496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Exhale_Back
+      name: Bulbfish Idle_3
       rect:
         serializedVersion: 2
         x: 32
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e98b1e3072cfea941aaa6c70d96665bd
-      internalID: 705449345
+      spriteID: e2c3a5ad60e3ca5418d7651e7dc06ca1
+      internalID: 1531540490
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Inhale_Front: -1343557822
-      Exhale_Front: -807406225
-      Inhale_Back: -1540389685
-      Exhale_Back: 705449345
+      Bulbfish Idle_0: 255157729
+      Bulbfish Idle_3: 1531540490
+      Bulbfish Idle_1: -1560623388
+      Bulbfish Idle_2: 586942496
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

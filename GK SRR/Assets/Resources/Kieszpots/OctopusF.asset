@@ -15,31 +15,31 @@ MonoBehaviour:
   name: Akkorokamui
   type1: 3
   type2: 14
-  maxHp: 3990
+  maxHp: 5000
   attack: 40
   defence: 30
   spAttack: 10
   spDefence: 8
   speed: 6
-  catchRate: 50
-  experienceYield: 50
+  catchRate: 25
+  experienceYield: 188
   growRate: 0
   description: The Akkorokamui is a gigantic octopus-like monster - it is said that
     its enormus body can reach sized of up to 120 meters in length. She has craving
     that cannot be satisfied, which makes her fickle with the propensity to do harm.
     Akkorokamui's nature as an octopus means that it is persistent and it is near
     impossible to escape its grasp without permission.
-  mainSprite: {fileID: 0}
-  animatorController: {fileID: 0}
+  mainSprite: {fileID: -2126433783, guid: 2367c9776ffdc5e4a97e9de8b2f6fef4, type: 3}
+  animatorController: {fileID: 9100000, guid: 4fe827e5f9f48594488df68035d4e6cc, type: 2}
   attackMove:
-    moveBase: {fileID: 0}
-    level: 0
+    moveBase: {fileID: 11400000, guid: 8943b4dd3ab30b5429db10a79aef28f9, type: 2}
+    level: 1
   specialAttackMove:
-    moveBase: {fileID: 0}
-    level: 0
+    moveBase: {fileID: 11400000, guid: 3309b9cb264b9044b86ef76d2ba7b9cf, type: 2}
+    level: 6
   healMove:
-    moveBase: {fileID: 0}
-    level: 0
+    moveBase: {fileID: 11400000, guid: bb159aa1e64361540a28fb9151a28b5f, type: 2}
+    level: 1
   boostMove:
-    moveBase: {fileID: 0}
-    level: 0
+    moveBase: {fileID: 11400000, guid: 1e31586a3174dad4aa4f2475476ac872, type: 2}
+    level: 7

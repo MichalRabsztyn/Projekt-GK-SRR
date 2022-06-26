@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FirstStep_Front
+      name: Penguin Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1bdb2366f4a84a46a300c27d0b24d55
-      internalID: 82218010
+      spriteID: e686705048fd2f147be24306337ac90a
+      internalID: 1008760074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SecondStep_Front
+      name: Penguin Idle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: def184505d3795f478156c5e548d0e62
-      internalID: -1149743894
+      spriteID: b46d73682f7a5c744b081c26ca44df16
+      internalID: 569044709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FirstStep_Back
+      name: Penguin Idle_2
       rect:
         serializedVersion: 2
         x: 0
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f9445bb83b401f46950c1c8ba8778ec
-      internalID: 64388488
+      spriteID: 0256162c6f7ca7f439326fef5c0f849a
+      internalID: 1673633324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SecondStep_Back
+      name: Penguin Idle_3
       rect:
         serializedVersion: 2
         x: 32
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04664e95983d33747b961cc6e13025b9
-      internalID: -1478256636
+      spriteID: 82440f191125d4c47adee2cd36823dce
+      internalID: 863022745
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SecondStep_Front: -1149743894
-      FirstStep_Back: 64388488
-      FirstStep_Front: 82218010
-      SecondStep_Back: -1478256636
+      Penguin Idle_3: 863022745
+      Penguin Idle_1: 569044709
+      Penguin Idle_2: 1673633324
+      Penguin Idle_0: 1008760074
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

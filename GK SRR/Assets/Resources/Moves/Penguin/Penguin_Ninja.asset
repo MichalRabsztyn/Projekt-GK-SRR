@@ -12,9 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74d0d71626999b04d9fff2c4bbc9c2b3, type: 3}
   m_Name: Penguin_Ninja
   m_EditorClassIdentifier: 
-  name: 
+  name: Ninja
   description: 
-  type1: 0
-  power: 0
-  accuracy: 0
-  pp: 0
+  type: 16
+  power: 75
+  accuracy: 100
+  alwaysHits: 0
+  pp: 10
+  category: 0
+  effects:
+    boosts: []
+    status: 0
+    volatileStatus: 0
+  target: 0

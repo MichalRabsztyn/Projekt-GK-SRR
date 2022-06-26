@@ -36,7 +36,7 @@ MonoBehaviour:
     moveBase: {fileID: 0}
     level: 0
   healMove:
-    moveBase: {fileID: 0}
+    moveBase: {fileID: 11400000, guid: bb159aa1e64361540a28fb9151a28b5f, type: 2}
     level: 0
   boostMove:
     moveBase: {fileID: 0}
