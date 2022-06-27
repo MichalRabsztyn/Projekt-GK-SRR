@@ -13,6 +13,10 @@ public class KieszpotParty : MonoBehaviour
         {
             return kieszpots;
         }
+        set
+        {
+            kieszpots = value;
+        }
     }
 
     private void Start()

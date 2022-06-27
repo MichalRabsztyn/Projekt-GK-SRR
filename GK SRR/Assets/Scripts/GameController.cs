@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
+        KieszpotDB.Init();
         ConditionsDB.Init();
     }
 
@@ -48,7 +49,13 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (state == GameState.Exploring) playerController.HandleUpdate();
+        if (state == GameState.Exploring)
+        {
+            playerController.HandleUpdate();
+
+            if (Input.GetKeyDown(KeyCode.K)) SavingSystem.i.Save("saveSlot1");
+            if (Input.GetKeyDown(KeyCode.L)) SavingSystem.i.Load("saveSlot1");
+        }
         else if (state == GameState.Battle) battleSystem.HandleUpdate();
         else if (state == GameState.Dialog) DialogManager.Instance.HandleUpdate();
     }

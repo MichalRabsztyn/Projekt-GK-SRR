@@ -43,7 +43,7 @@ public class Kieszpot
     public Queue<string> StatusChanges { get; private set; }
 
     public event System.Action OnStatusChange;
-
+    
     public void Init()
     {
         Moves = new Dictionary<KieszpotMoveName, Move>();
@@ -67,6 +67,49 @@ public class Kieszpot
         ResetStatBoost();
         Status = null;
         VolatileStatus = null;
+    }
+
+    public Kieszpot(KieszpotSaveData saveData)
+    {
+        _base = KieszpotDB.GetKieszpotByName(saveData.name);
+        HP = saveData.hp;
+        level = saveData.level;
+        Exp = saveData.exp;
+
+        if (saveData.statusId != null)
+            Status = ConditionsDB.Conditions[saveData.statusId.Value];
+        else
+            Status = null;
+
+        Moves = new Dictionary<KieszpotMoveName, Move>();
+        foreach (var move in Base.LearnableMoves)
+        {
+            if (move.Value.Base == null || move.Value.Level > Level)
+            {
+                Moves.Add(move.Key, null);
+                continue;
+            }
+
+            Moves.Add(move.Key, new Move(move.Value.Base));
+        }
+
+        CalculateStats();
+        StatusChanges = new Queue<string>();
+        ResetStatBoost();
+        VolatileStatus = null;
+    }
+
+    public KieszpotSaveData GetSaveData()
+    {
+        var saveData = new KieszpotSaveData()
+        {
+            name = Base.Name,
+            hp = HP,
+            level = Level,
+            exp= Exp,
+            statusId = Status?.Id
+        };
+        return saveData;
     }
 
     void CalculateStats()
@@ -287,4 +330,15 @@ public class DamageDetails
 
     public float Critical { get; set; }
     public float Effectiveness { get; set; }
+}
+
+[System.Serializable]
+
+public class KieszpotSaveData
+{
+    public string name;
+    public int level;
+    public int exp;
+    public int hp;
+    public ConditionID? statusId;
 }

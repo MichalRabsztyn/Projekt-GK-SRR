@@ -1,10 +1,11 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, ISavable
 {
     private Animator animator;
 
@@ -102,4 +103,33 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    public object CaptureState()
+    {
+        var saveData = new PlayerSaveData()
+        {
+            position = new float[] { transform.position.x, transform.position.y },
+            kieszpots = GetComponent<KieszpotParty>().Kieszpots.Select(p=>p.GetSaveData()).ToList()
+        };
+        return saveData;
+    }
+
+    public void RestoreState(object state)
+    {
+        var saveData = (PlayerSaveData)state;
+
+        //Position
+        var pos = saveData.position;
+        transform.position = new Vector3(pos[0], pos[1]);
+
+        //Party
+        GetComponent<KieszpotParty>().Kieszpots = saveData.kieszpots.Select(s => new Kieszpot(s)).ToList();
+    }
+
+}
+[Serializable]
+public class PlayerSaveData
+{
+    public float[] position;
+    public List<KieszpotSaveData> kieszpots;
 }
