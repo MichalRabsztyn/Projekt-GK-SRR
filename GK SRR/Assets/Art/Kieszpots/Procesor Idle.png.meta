@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 046886eb1c7b23748a6fecd2fd1c528a
+guid: ea49307c0962bd84f88417d52970fbd3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kot_0
+      name: Procesor Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f090aa95b089e0147b72fa1848e09fbf
-      internalID: 1843788439
+      spriteID: 397441b43f9e68144884ef27c4b534c0
+      internalID: -1402245444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kot_1
+      name: Procesor Idle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -139,35 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6984a8b69d385f47bf38e10bdc350c2
-      internalID: -1336985846
+      spriteID: f17dfb891a9e8d0449f0157d017d7237
+      internalID: -612711146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kot_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8653043d601e2b04abca41bc2a0f79df
-      internalID: -1864217474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kot_3
+      name: Procesor Idle_2
       rect:
         serializedVersion: 2
         x: 0
@@ -181,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9979eee4a7709a64cbed7f47a629ca74
-      internalID: -1775883479
+      spriteID: 061cdccaea4f74c4381a48599001407d
+      internalID: 45428088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kot_4
+      name: Procesor Idle_3
       rect:
         serializedVersion: 2
         x: 32
@@ -202,29 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 598eaaf4dff60ef42b39b1c67a550c55
-      internalID: 59067217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Kot_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 115e9c64fdf87eb40b77acb156259805
-      internalID: -1415167673
+      spriteID: 5bda1daee6f226a4ba69391c843b776c
+      internalID: -1380348848
       vertices: []
       indices: 
       edges: []
@@ -240,12 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Kot_3: -1775883479
-      Kot_4: 59067217
-      Kot_0: 1843788439
-      Kot_2: -1864217474
-      Kot_5: -1415167673
-      Kot_1: -1336985846
+      Procesor Idle_2: 45428088
+      Procesor Idle_1: -612711146
+      Procesor Idle_0: -1402245444
+      Procesor Idle_3: -1380348848
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

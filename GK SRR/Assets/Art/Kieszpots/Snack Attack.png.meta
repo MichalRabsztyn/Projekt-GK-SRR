@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lasso_Front
+      name: Snack Attack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,20 +112,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d3f1a0cc281b49429a7229072ba8bef
-      internalID: -648160351
+      spriteID: a47ac8283fc4665459c24516159efcd7
+      internalID: 592514073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun_Front
+      name: Snack Attack_1
       rect:
         serializedVersion: 2
         x: 32
@@ -133,20 +133,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe0f861034ccfe8498331bb40819e8b0
-      internalID: -758328619
+      spriteID: fa9f6250931a79846bc5aa514de58d7b
+      internalID: -1106990848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lasso_Back
+      name: Snack Attack_2
       rect:
         serializedVersion: 2
         x: 0
@@ -154,20 +154,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61667ce697769e74ba562527a297bb6d
-      internalID: -1911315718
+      spriteID: 6900c9a4b1d67224b8dbd18232857a0f
+      internalID: -1399121055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gun_Back
+      name: Snack Attack_3
       rect:
         serializedVersion: 2
         x: 32
@@ -175,14 +175,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb480324a302c474fa252e2df2f8671a
-      internalID: -1921325838
+      spriteID: 287c2c7c0358a494480b8086979c4aa1
+      internalID: 593717143
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Gun_Front: -758328619
-      Lasso_Back: -1911315718
-      Lasso_Front: -648160351
-      Gun_Back: -1921325838
+      Snack Attack_2: -1399121055
+      Snack Attack_0: 592514073
+      Snack Attack_3: 593717143
+      Snack Attack_1: -1106990848
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

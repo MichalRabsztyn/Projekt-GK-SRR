@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Left_Front
+      name: Frog Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2a08a586896dc34487280683e99de9a
-      internalID: 651232371
+      spriteID: c2d1de2422c6c5742956fc419d69318a
+      internalID: 961438685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Right_Front
+      name: Frog Idle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0645ef10c0942e345ab36c130eeb6730
-      internalID: -417367579
+      spriteID: 8b478e9f5dc327847a134f1f2bd9410f
+      internalID: -1429147132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left_Back
+      name: Frog Idle_2
       rect:
         serializedVersion: 2
         x: 0
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97bd65ec1c7811048923b96febe4cd73
-      internalID: 758925730
+      spriteID: 85e813550f99c6947834f08892f4253a
+      internalID: -2108609270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Right_Back
+      name: Frog Idle_3
       rect:
         serializedVersion: 2
         x: 32
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bd1ffa2976007449b8edd98a1a0ef04
-      internalID: 1900624269
+      spriteID: 246e98a5fdcb26c49a516e2803d46a27
+      internalID: -674364424
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Right_Front: -417367579
-      Right_Back: 1900624269
-      Left_Back: 758925730
-      Left_Front: 651232371
+      Frog Idle_0: 961438685
+      Frog Idle_1: -1429147132
+      Frog Idle_2: -2108609270
+      Frog Idle_3: -674364424
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

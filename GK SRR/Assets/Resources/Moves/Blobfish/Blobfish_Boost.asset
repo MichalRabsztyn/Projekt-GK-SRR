@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74d0d71626999b04d9fff2c4bbc9c2b3, type: 3}
-  m_Name: AttackDown
+  m_Name: Blobfish_Boost
   m_EditorClassIdentifier: 
-  name: Growl
-  description: Makes opponent's attack power gone down.
-  type: 8
-  power: 10
-  accuracy: 90
-  alwaysHits: 0
-  pp: 5
+  name: Thunderbolt
+  description: 
+  type: 4
+  power: 50
+  accuracy: 50
+  alwaysHits: 1
+  pp: 2
   category: 2
   effects:
     boosts:
-    - stat: 0
-      boost: -1
-    status: 1
-    volatileStatus: 6
+    - stat: 4
+      boost: -10
+    status: 4
+    volatileStatus: 0
   target: 0

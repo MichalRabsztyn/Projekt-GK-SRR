@@ -15,10 +15,10 @@ MonoBehaviour:
   name: Lasso
   description: 
   type: 1
-  power: 150
-  accuracy: 8
-  alwaysHits: 1
-  pp: 2
+  power: 20
+  accuracy: 15
+  alwaysHits: 0
+  pp: 10
   category: 0
   effects:
     boosts: []

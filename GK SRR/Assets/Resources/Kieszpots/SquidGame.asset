@@ -15,27 +15,27 @@ MonoBehaviour:
   name: RedLight
   type1: 1
   type2: 7
-  maxHp: 0
-  attack: 0
-  defence: 0
-  spAttack: 0
-  spDefence: 0
-  speed: 0
-  catchRate: 50
-  experienceYield: 50
-  growRate: 0
+  maxHp: 3000
+  attack: 11
+  defence: 39
+  spAttack: 2
+  spDefence: 4
+  speed: 6
+  catchRate: 75
+  experienceYield: 77
+  growRate: 1
   description: 
-  mainSprite: {fileID: 0}
-  animatorController: {fileID: 0}
+  mainSprite: {fileID: 2132657769, guid: c167f0f9bab260a469527f002accc55d, type: 3}
+  animatorController: {fileID: 9100000, guid: 091c619b7e72ac24aabf44c644fc206a, type: 2}
   attackMove:
-    moveBase: {fileID: 0}
-    level: 0
+    moveBase: {fileID: 11400000, guid: 691b8a16ee6c37146873e392e35a3bf8, type: 2}
+    level: 1
   specialAttackMove:
-    moveBase: {fileID: 0}
-    level: 0
+    moveBase: {fileID: 11400000, guid: 6e9982807d6077e42b87ade4d7608a8b, type: 2}
+    level: 2
   healMove:
-    moveBase: {fileID: 0}
-    level: 0
+    moveBase: {fileID: 11400000, guid: bb159aa1e64361540a28fb9151a28b5f, type: 2}
+    level: 1
   boostMove:
-    moveBase: {fileID: 0}
-    level: 0
+    moveBase: {fileID: 11400000, guid: 4e77ea9155341644c8660ec64cfb405d, type: 2}
+    level: 5

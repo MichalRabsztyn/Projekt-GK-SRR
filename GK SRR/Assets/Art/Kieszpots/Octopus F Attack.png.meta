@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hunger_Front
+      name: Octopus F Attack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4449b8eeac6510f44aee8d9fd8cfc5cd
-      internalID: -1790300521
+      spriteID: c9915d64fedad1a439d27e15578040b1
+      internalID: 688705233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken_Front
+      name: Octopus F Attack_1
       rect:
         serializedVersion: 2
         x: 32
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b838cc7910031f84695740eb95fdb775
-      internalID: -1997230983
+      spriteID: fa67e006f8ea5fc4ba2afff24780ce00
+      internalID: -657511265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hunger_Back
+      name: Octopus F Attack_2
       rect:
         serializedVersion: 2
         x: 0
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 561d8dac5f2a811469a95680cef225e5
-      internalID: 1102555974
+      spriteID: 17da92ef0af9f4f42baaf9f3ad5eb9fc
+      internalID: 721914645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Kraken_Back
+      name: Octopus F Attack_3
       rect:
         serializedVersion: 2
         x: 32
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de1184f41a477d343a48301469cf32ea
-      internalID: -822800455
+      spriteID: b0a7ff051ad5e3c47bdf92ac7cd9a2a9
+      internalID: -97668694
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Kraken_Back: -822800455
-      Kraken_Front: -1997230983
-      Hunger_Back: 1102555974
-      Hunger_Front: -1790300521
+      Octopus F Attack_3: -97668694
+      Octopus F Attack_1: -657511265
+      Octopus F Attack_0: 688705233
+      Octopus F Attack_2: 721914645
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
