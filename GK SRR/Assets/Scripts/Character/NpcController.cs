@@ -28,7 +28,6 @@ public class NpcController : MonoBehaviour, Interactable
 
     private void Update()
     {
-
         if (DialogManager.Instance.isShowing) return;
 
         if (state == NPCState.Idle)
