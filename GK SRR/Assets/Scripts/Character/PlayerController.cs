@@ -13,9 +13,6 @@ public class PlayerController : MonoBehaviour, ISavable
     private bool isMoving;
     private Vector2 input;
 
-
-    public event Action OnEncountered;
-
     private void Awake()
     {
         character = GetComponent<Character>();
@@ -35,7 +32,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
             if (input != Vector2.zero)
             {
-                StartCoroutine(character.Move(input, CheckForEncounters));
+                StartCoroutine(character.Move(input, OnMoveOver));
             }
         }
         character.HandleUpdate();
@@ -55,14 +52,17 @@ public class PlayerController : MonoBehaviour, ISavable
         }
     }
 
-    private void CheckForEncounters()
+    private void OnMoveOver()
     {
-        if (Physics2D.OverlapCircle(transform.position, 0.2f, GameLayers.i.GrassLayer) != null)
+        var colliders = Physics2D.OverlapCircleAll(transform.position - new Vector3(0, character.OffsetY), 0.2f, GameLayers.i.TriggerableLayers);
+        foreach (var collider in colliders)
         {
-            if (UnityEngine.Random.Range(1,101) <= 10)
+            var triggerable = collider.GetComponent<IPlayerTriggerable>();
+            if (triggerable != null)
             {
                 character.Animator.isMoving = false;
-                OnEncountered();
+                triggerable.OnPlayerTriggered(this);
+                break;
             }
         }
     }
@@ -88,6 +88,8 @@ public class PlayerController : MonoBehaviour, ISavable
         //Party
         GetComponent<KieszpotParty>().Kieszpots = saveData.kieszpots.Select(s => new Kieszpot(s)).ToList();
     }
+
+    public Character Character => character;
 
 }
 [Serializable]

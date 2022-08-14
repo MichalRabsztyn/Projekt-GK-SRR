@@ -15,8 +15,8 @@ TagManager:
   - LongGrass
   - Player
   - Interactable
-  - 
-  - 
+  - Portal
+  - SolidForeground
   - 
   - 
   - 
@@ -44,12 +44,12 @@ TagManager:
   - name: Background
     uniqueID: 1879973025
     locked: 0
-  - name: Foreground
-    uniqueID: 741926063
-    locked: 0
   - name: Player
     uniqueID: 3323825805
     locked: 0
+  - name: Foreground
+    uniqueID: 741926063
+    locked: 1
   - name: Battle
     uniqueID: 542561313
     locked: 0

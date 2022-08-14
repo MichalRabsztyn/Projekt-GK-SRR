@@ -9,17 +9,26 @@ public class Character : MonoBehaviour
 
     public bool isMoving { get; private set; }
 
+    public float OffsetY { get; private set; } = 0.3f;
+
     CharacterAnimator animator;
 
     private void Awake()
     {
-        animator = GetComponent<CharacterAnimator>(); 
+        animator = GetComponent<CharacterAnimator>();
+        SetPositionAndSnapToTile(transform.position);
+    }
+
+    public void SetPositionAndSnapToTile(Vector2 pos)
+    {
+        pos.x = Mathf.Floor(pos.x) + 0.5f;
+        pos.y = Mathf.Floor(pos.y) + 0.5f + OffsetY;
+
+        transform.position = pos;
     }
 
     public IEnumerator Move(Vector2 moveVec, Action OnMoveOver=null)
     {
-        
-
         animator.MoveX = Mathf.Clamp(moveVec.x, -1f, 1f);
         animator.MoveY = Mathf.Clamp(moveVec.y, -1f, 1f);
 
@@ -35,8 +44,7 @@ public class Character : MonoBehaviour
         while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPos, movementSpeed * Time.deltaTime);
-            yield return null; //zacznij od tego punktu w kolejnym Update
-
+            yield return null; 
         }
         transform.position = targetPos;
 
@@ -56,7 +64,7 @@ public class Character : MonoBehaviour
         var diff = targetPos - transform.position;
         var dir = diff.normalized;
 
-        if (Physics2D.BoxCast(transform.position + dir, new Vector2(0.2f, 0.2f), 0f, dir, diff.magnitude - 1, GameLayers.i.SolidLayer | GameLayers.i.InteractableLayer | GameLayers.i.PlayerLayer) == true)
+        if (Physics2D.BoxCast(transform.position + dir, new Vector2(0.2f, 0.2f), 0f, dir, diff.magnitude - 1, GameLayers.i.SolidLayer | GameLayers.i.SolidBackgroundLayer | GameLayers.i.InteractableLayer | GameLayers.i.PlayerLayer) == true)
         {
             return false;
         }
@@ -65,7 +73,7 @@ public class Character : MonoBehaviour
 
     private bool IsWalkable(Vector3 targetPos)
     {
-        if (Physics2D.OverlapCircle(targetPos, 0.1f, GameLayers.i.SolidLayer | GameLayers.i.InteractableLayer) != null)
+        if (Physics2D.OverlapCircle(targetPos, 0.1f, GameLayers.i.SolidLayer | GameLayers.i.SolidBackgroundLayer | GameLayers.i.InteractableLayer) != null)
         {
             return false;
         }

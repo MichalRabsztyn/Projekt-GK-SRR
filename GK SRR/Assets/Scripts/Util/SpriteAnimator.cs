@@ -12,7 +12,7 @@ public class SpriteAnimator : MonoBehaviour
     float timer;
 
 
-    public SpriteAnimator(List<Sprite> frames, SpriteRenderer spriteRenderer, float frameRate = 0.16f)
+    public SpriteAnimator(List<Sprite> frames, SpriteRenderer spriteRenderer, float frameRate = 0.1f)
     {
         this.frames = frames;
         this.spriteRenderer = spriteRenderer;
