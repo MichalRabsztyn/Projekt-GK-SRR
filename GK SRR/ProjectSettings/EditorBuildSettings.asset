@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScenes/City Town.unity
     guid: a7e67a28915b7954c9904626beea120c
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Route 2.unity
+    guid: 38eb7a03acea6024f904a84c085bea52
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Route 3.unity
+    guid: 305e23fc59f12ac4bbe74a7a9758fced
   m_configObjects: {}
