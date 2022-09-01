@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameState { Exploring, Battle, Dialog, Paused }
 public class GameController : MonoBehaviour
@@ -12,6 +13,7 @@ public class GameController : MonoBehaviour
     GameState state;
     GameState stateBeforePause;
     public static GameController Instance { get; private set; }
+    int activeSceneIndex;
 
     private void Awake()
     {
@@ -22,6 +24,8 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        activeSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        AudioManager.i.PlayMusic(activeSceneIndex);
         battleSystem.OnBattleOver += EndBattle;
 
         DialogManager.Instance.OnShowDialog += () => { state = GameState.Dialog; };
@@ -73,5 +77,11 @@ public class GameController : MonoBehaviour
         }
         else if (state == GameState.Battle) battleSystem.HandleUpdate();
         else if (state == GameState.Dialog) DialogManager.Instance.HandleUpdate();
+    }
+
+    public void SetCurrentSceneActive(int SceneIndex)
+    {
+        activeSceneIndex = SceneIndex;
+        AudioManager.i.PlayMusic(activeSceneIndex);
     }
 }

@@ -63,9 +63,9 @@ public class Character : MonoBehaviour
     {
         var diff = targetPos - transform.position;
         var dir = diff.normalized;
-
         if (Physics2D.BoxCast(transform.position + dir, new Vector2(0.2f, 0.2f), 0f, dir, diff.magnitude - 1, GameLayers.i.SolidLayer | GameLayers.i.SolidBackgroundLayer | GameLayers.i.InteractableLayer | GameLayers.i.PlayerLayer) == true)
         {
+            AudioManager.i.PlaySFX(1);
             return false;
         }
         return true;

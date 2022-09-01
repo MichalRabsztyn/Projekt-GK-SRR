@@ -9,8 +9,10 @@ public class Portal : MonoBehaviour, IPlayerTriggerable
     [SerializeField] int sceneToLoad = -1;
     [SerializeField] DestinationId destinationPortal;
     [SerializeField] Transform spawnPoint;
+    [SerializeField] SceneDetails sceneDetails;
 
     PlayerController player;
+
     public void OnPlayerTriggered(PlayerController player)
     {
         this.player = player;
@@ -37,8 +39,10 @@ public class Portal : MonoBehaviour, IPlayerTriggerable
 
         player.Character.SetPositionAndSnapToTile(destinationPortal.spawnPoint.position);
 
-        yield return fader.FadeOut(0.4f);
+        GameController.Instance.SetCurrentSceneActive(SceneManager.GetActiveScene().buildIndex);
 
+        yield return fader.FadeOut(0.4f);
+        player.ShowOnScreenInfo();
         GameController.Instance.PauseGame(false);
 
         Destroy(gameObject);

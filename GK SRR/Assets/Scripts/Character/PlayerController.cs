@@ -4,12 +4,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using DG.Tweening;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerController : MonoBehaviour, ISavable
 {
 
     private Character character;
-
+    [SerializeField] public TextMeshProUGUI OnScreenInfo;
     private bool isMoving;
     private Vector2 input;
 
@@ -65,6 +69,7 @@ public class PlayerController : MonoBehaviour, ISavable
                 break;
             }
         }
+        AudioManager.i.PlaySFX(4);
     }
 
     public object CaptureState()
@@ -90,6 +95,18 @@ public class PlayerController : MonoBehaviour, ISavable
     }
 
     public Character Character => character;
+
+    public void ShowOnScreenInfo()
+    {
+        OnScreenInfo.alpha = 255f;
+        OnScreenInfo.text = SceneManager.GetActiveScene().name;
+
+        InfoFadeOut(3f);
+    }
+    public void InfoFadeOut(float time)
+    {
+        OnScreenInfo.DOFade(0f, time);
+    }
 
 }
 [Serializable]

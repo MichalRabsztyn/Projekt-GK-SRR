@@ -29,8 +29,10 @@ public class BattleSystem : MonoBehaviour
     KieszpotParty playerParty;
     Kieszpot wildKieszpot;
 
+    int prevMusic;
     public void StartBattle(KieszpotParty playerParty, Kieszpot wildKieszpot)
     {
+        prevMusic = AudioManager.i.currentMusic;
         this.playerParty = playerParty;
         this.wildKieszpot = wildKieszpot;
         StartCoroutine(SetupBattle());
@@ -38,6 +40,7 @@ public class BattleSystem : MonoBehaviour
 
     public IEnumerator SetupBattle()
     {
+        AudioManager.i.PlayMusic(((int)MusicClip.Battle));
         playerUnit.Setup(playerParty.GetHealthyKieszpot());
         enemyUnit.Setup(wildKieszpot);
 
@@ -121,6 +124,7 @@ public class BattleSystem : MonoBehaviour
         if (CheckMoveHit(move, sourceUnit.Kieszpot, targetUnit.Kieszpot))
         {
             bool isPlayer = sourceUnit == playerUnit;
+            AudioManager.i.PlaySFX(2);
             sourceUnit.animationController.PlayMoveAnimation((KieszpotMoveName)moveID, isPlayer);
             yield return new WaitForSeconds(0.5f);
 
@@ -242,6 +246,7 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.BattleOver;
         playerParty.Kieszpots.ForEach(P => P.OnBattleOver());
         OnBattleOver(won);
+        AudioManager.i.PlayMusic(prevMusic);
     }
 
     private void ActionSelection()
