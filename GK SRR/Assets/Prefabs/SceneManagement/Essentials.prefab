@@ -1865,11 +1865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kieszpots:
   - _base: {fileID: 11400000, guid: 8647a94f58cec744d86997e85238ceac, type: 2}
-    level: 2
-  - _base: {fileID: 11400000, guid: 7e8f9f4cefb2d374aad815f5b0cb5e69, type: 2}
-    level: 3
-  - _base: {fileID: 11400000, guid: 7e8f9f4cefb2d374aad815f5b0cb5e69, type: 2}
-    level: 2
+    level: 1
 --- !u!114 &544243009549129613
 MonoBehaviour:
   m_ObjectHideFlags: 0

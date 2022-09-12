@@ -41,6 +41,14 @@ public class BattleSystem : MonoBehaviour
     public IEnumerator SetupBattle()
     {
         AudioManager.i.PlayMusic(((int)MusicClip.Battle));
+        if (playerParty.GetHealthyKieszpot() == null)
+        {
+            yield return dialogBox.TypeDialog("All your kieszpots fainted");
+            yield return new WaitForSeconds(0.5f);
+            BattleOver(false);
+            yield break;
+        }
+        
         playerUnit.Setup(playerParty.GetHealthyKieszpot());
         enemyUnit.Setup(wildKieszpot);
 
@@ -49,6 +57,8 @@ public class BattleSystem : MonoBehaviour
         dialogBox.SetMoveNames(playerUnit.Kieszpot.Moves);
 
         yield return dialogBox.TypeDialog($"A wild {enemyUnit.Kieszpot.Base.Name} appeared.");
+
+       
 
         escapeAttempts = 0;
         ActionSelection();

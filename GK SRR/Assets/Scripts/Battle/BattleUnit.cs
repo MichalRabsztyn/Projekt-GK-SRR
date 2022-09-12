@@ -23,23 +23,26 @@ public class BattleUnit : MonoBehaviour
 
     public void Setup(Kieszpot kieszpot)
     {
-        Kieszpot = kieszpot;
-        animationController.Setup(Kieszpot.Base.AnimatorController);
-
-        transform.localScale = new Vector3(200, 200, 200);
-
-        if (isPlayerUnit)
+        if (kieszpot != null)
         {
-            animationController.SetFaceAnimation(false);
-            animationController.PlayEnterAnimation(false);
-        }
-        else
-        {
-            animationController.SetFaceAnimation(true);
-            animationController.PlayEnterAnimation(true);
-        }
+            Kieszpot = kieszpot;
+            animationController.Setup(Kieszpot.Base.AnimatorController);
 
-        hud.SetData(kieszpot);
+            transform.localScale = new Vector3(200, 200, 200);
+
+            if (isPlayerUnit)
+            {
+                animationController.SetFaceAnimation(false);
+                animationController.PlayEnterAnimation(false);
+            }
+            else
+            {
+                animationController.SetFaceAnimation(true);
+                animationController.PlayEnterAnimation(true);
+            }
+
+            hud.SetData(kieszpot);
+        }
     }
 
     public void FaceKieszpot()

@@ -15,8 +15,8 @@ MonoBehaviour:
   name: Lasso
   description: 
   type: 1
-  power: 20
-  accuracy: 15
+  power: 50
+  accuracy: 70
   alwaysHits: 0
   pp: 10
   category: 0

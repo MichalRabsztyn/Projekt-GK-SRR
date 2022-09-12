@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public enum GameState { Exploring, Battle, Dialog, Paused, Menu }
 public class GameController : MonoBehaviour
 {
-    [SerializeField] PlayerController playerController;
+    [SerializeField] public PlayerController playerController;
     [SerializeField] BattleSystem battleSystem;
     [SerializeField] Camera worldCamera;
 

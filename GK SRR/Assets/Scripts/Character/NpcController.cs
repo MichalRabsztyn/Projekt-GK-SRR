@@ -7,6 +7,7 @@ public class NpcController : MonoBehaviour, Interactable
     [SerializeField] Dialog dialog;
     [SerializeField] List<Vector2> movementPattern;
     [SerializeField] float timeBetweenPattern;
+    [SerializeField] bool canHeal = false;
 
     NPCState state;
     float idleTimer = 0f;
@@ -29,6 +30,18 @@ public class NpcController : MonoBehaviour, Interactable
             StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
 
             state = NPCState.Idle;
+
+            if (canHeal)
+            {
+                foreach (var kieszpot in GameController.Instance.playerController.GetComponent<KieszpotParty>().Kieszpots)
+                {
+                    kieszpot.HP = kieszpot.MaxHp;
+                    foreach (var move in kieszpot.Moves)
+                    {
+                        move.Value.PP = move.Value.Base.PP;
+                    }
+                }
+            }
         }
     }
 

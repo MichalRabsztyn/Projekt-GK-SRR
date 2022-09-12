@@ -26,7 +26,6 @@ public class AudioManager : MonoBehaviour
     public void PlayMusic(int SceneIndex, bool loop = true)
     {
         musicSource.Stop();
-        AudioClip clip;
         switch(SceneIndex)
         {
             case 6: //Battle
@@ -58,7 +57,6 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(int soundType, bool loop = false)
     {
-        AudioClip clip;
         switch (soundType)
         {
             case 1: //Hit

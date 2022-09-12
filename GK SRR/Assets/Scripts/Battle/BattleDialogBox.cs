@@ -70,12 +70,18 @@ public class BattleDialogBox : MonoBehaviour
             if (i == selectMove) moveTexts[i].color = highlightedColor;
             else moveTexts[i].color = Color.black;
         }
-
-        movePPText.text = $"PP {move.PP}/{move.Base.PP}";
-        typeText.text = move.Base.Type.ToString();
-
-        if (move.PP == 0) movePPText.color = Color.red;
-        else movePPText.color = Color.black;
+        if (move != null)
+        {
+            movePPText.text = $"PP {move.PP}/{move.Base.PP}";
+            typeText.text = move.Base.Type.ToString();
+            if (move.PP == 0) movePPText.color = Color.red;
+            else movePPText.color = Color.black;
+        }
+        else
+        {
+            movePPText.text = $"PP -/-";
+            typeText.text = "-";
+        }
     }
 
     public void SetMoveNames(Dictionary<KieszpotMoveName, Move> moves)

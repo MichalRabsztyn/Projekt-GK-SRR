@@ -213,6 +213,7 @@ MonoBehaviour:
   movementPattern:
   - {x: 0, y: 1}
   timeBetweenPattern: 1
+  canHeal: 0
 --- !u!61 &137871835
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -412,6 +413,7 @@ MonoBehaviour:
     - This is City Town. Home of all NPCs.
   movementPattern: []
   timeBetweenPattern: 1
+  canHeal: 0
 --- !u!61 &188941655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -736,6 +738,7 @@ MonoBehaviour:
   - {x: 0, y: 6}
   - {x: -12, y: 0}
   timeBetweenPattern: 1
+  canHeal: 0
 --- !u!61 &286391872
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -935,6 +938,7 @@ MonoBehaviour:
   movementPattern:
   - {x: -1, y: 0}
   timeBetweenPattern: 1
+  canHeal: 0
 --- !u!61 &360847640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1130,9 +1134,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - i will be your healer one day.
+    - One, two, three... your kieszpots are wounds free
   movementPattern: []
   timeBetweenPattern: 1
+  canHeal: 1
 --- !u!61 &366645942
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56035,6 +56040,7 @@ MonoBehaviour:
   - {x: -1, y: 0}
   - {x: 0, y: -10}
   timeBetweenPattern: 1
+  canHeal: 0
 --- !u!61 &952900923
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65023,6 +65029,7 @@ MonoBehaviour:
     - Do not bother me.
   movementPattern: []
   timeBetweenPattern: 1
+  canHeal: 0
 --- !u!61 &1873001021
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65229,6 +65236,7 @@ MonoBehaviour:
   - {x: 4, y: 0}
   - {x: 0, y: 1}
   timeBetweenPattern: 5
+  canHeal: 0
 --- !u!61 &2006085006
 BoxCollider2D:
   m_ObjectHideFlags: 0
