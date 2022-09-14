@@ -46859,7 +46859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - AAAAAAAAAAAAAA!!!!!!
+    - WELCOME TO THE COLONY !!!
   movementPattern:
   - {x: 10, y: 0}
   - {x: 0, y: -4}
