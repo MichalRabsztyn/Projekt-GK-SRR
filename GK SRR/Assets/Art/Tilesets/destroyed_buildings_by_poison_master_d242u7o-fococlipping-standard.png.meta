@@ -1,0 +1,3972 @@
+fileFormatVersion: 2
+guid: 7a32dcfe350cf2b4caa739c4327782be
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 255
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b9b3f35da7c394b95ead88d03a810d
+      internalID: -758121787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 255
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ca78340578eca4caa01ce58b94cfc3
+      internalID: 853055465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 255
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3467752afa78cb40b07f0667e006260
+      internalID: -1697257185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 255
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd601dde422ff6943a0d5c07b46c3ac5
+      internalID: -54584956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 255
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35619e06df5b32540a1ae9a75615cc7c
+      internalID: -62896481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 255
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d15729f01c67d43b96a588df78e67f
+      internalID: 1260701459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729e4193e667c11479ae9fcde8d51def
+      internalID: 1517673408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31ba090907df344aa524d1063f9d98c
+      internalID: 533236483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7040f774b7f5ef84fb867ab2c347b26f
+      internalID: -1253217361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb705d0c2c03ee4fb8ff47d9c6179f0
+      internalID: -937960117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cf37f8a60ba5924d80ae951db75e398
+      internalID: -1847806174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_11
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8440b93b0ecab1a4ea34f2490645db7d
+      internalID: -1893559762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_12
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18738d4de5bd8a440a73e6e5c9479d27
+      internalID: -31342025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_13
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea18af94e4a45c4b9fbdd7c57da1e5c
+      internalID: -1608502898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4daf803e975320148bab62a23a94912e
+      internalID: 2068851214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_15
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2f8e8c8a6356a4ea5162ec5e5afd59
+      internalID: 1020580250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_16
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed89306138ed264dad381ac7b2441ff
+      internalID: -230512084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_17
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 239
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9fcefcff2e0084f9c48afe10ebf31f
+      internalID: -2010490858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 223
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0f59a4149d87d4f8cd464c6612dfaa
+      internalID: -751460221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_19
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 223
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2407bba2799ad1d428315131efa19a5c
+      internalID: -761317871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_20
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 223
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b67de12f7756f42ab1fa6f2c1e46ae
+      internalID: 472985289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 223
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3ec6572097d6f4696908cdbbc455ca
+      internalID: -1601112677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 223
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29adadccb70a9da4aaca453207f0a3e8
+      internalID: 1833027195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_23
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 223
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77445c054178c643b6f14c9636eb80a
+      internalID: -970389147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 223
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa31052faa75698448d3ca4267670dea
+      internalID: 1383093899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_25
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 223
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133bd9887d28ba74a8440933340f5c9a
+      internalID: 1678661067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 223
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b7f2d4fbb955c468443551c29258bb
+      internalID: -968450544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_27
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 223
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b869c140b3268cf41800a5e23cd9b7be
+      internalID: 649282594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_28
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 223
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857422058fe751949b0a9f6e1a4b03ba
+      internalID: -1551917116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_29
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 223
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31df26b15b71e443b3ba77ccc2e55d0
+      internalID: 1393939347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752ef27033082d047942fb3f14b873e7
+      internalID: -1312553630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e3247c0981ab144a29a35c992afca5
+      internalID: 2009763437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_32
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ad376eb62570d45a5e4f8e52141cdc
+      internalID: 353176332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_33
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5225f7ee9a4bc574aa0ac41ca734ad8a
+      internalID: -267381280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff17546bf43001438c6fce28d03ff37
+      internalID: -1183483057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_35
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6531d70742549274086aa55fc9a20760
+      internalID: -1946197354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_36
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc714abcf49c214fa84011f6732f165
+      internalID: 1527048635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_37
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780b28acb7534594e9684d5feca6a098
+      internalID: -108479000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87708a397d7dab54da1cfce2fb444074
+      internalID: 1504172905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_39
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31d46aecc78aa549a5ba18573f163a6
+      internalID: -247663902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_40
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8043d30eb661cc46b651917bac1a445
+      internalID: -1419366985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_41
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 207
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a804d7d11f8b94c86feb38a9c7c65c
+      internalID: -1222427242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 191
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a8123dca7829843953a7de1f0cfea9
+      internalID: 213659754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_43
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 191
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb7e29da2122c14c9a65bcfd5dc9e49
+      internalID: -1510708763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_44
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 191
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e521384c96abd438ae55626f3fb37b
+      internalID: -333432519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_45
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 191
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a684df91e1f43c4bb2131300ff570f4
+      internalID: -39265371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_46
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 191
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc0483fb5db1624db19cee56162e3b1
+      internalID: -1798109535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_47
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 191
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d01ce0fc4ed9642a96d052882450d9
+      internalID: 1260065834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_48
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 191
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78e819681fed2247ab11614ff45fd0c
+      internalID: -1797603757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_49
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 191
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d7836d7a60e2f408bb97092e72390d
+      internalID: -729597343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_50
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 191
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd0ed5341d557043b0b9a091612f0f4
+      internalID: 27040527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_51
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 191
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3963b9153eb994ca7658eb1fa3cd77
+      internalID: 1648141651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_52
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 191
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fa00f1f40694e4d8ab0f72b1e9c3c6
+      internalID: -1132387760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_53
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 191
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46a19a212fd57649b56294ccdf97e1e
+      internalID: -1755333766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfb1fe97ba648c418a428e2e1331fae
+      internalID: 1549737736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_55
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fbf5dcf200fc241ba4167cc07cc432
+      internalID: 899237544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_56
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eda0568343d69c40a2eaf47065b5700
+      internalID: -1152662815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_57
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8812cd6aa8d034da520c9fcb28b2f9
+      internalID: -226165073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_58
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1053f53557cb674b813bab3e6bfb691
+      internalID: -1157857617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_59
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98cef78d4b406d3429f1606a5fdc445c
+      internalID: 1746617382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_60
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6301e95953ddf5342b24f0340afcf99a
+      internalID: -2003624391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_61
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97f9ebd83669ba40b71fba9d89119b9
+      internalID: -1559267161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_62
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1482bd41fd0e944be6cf32dc85dcb3
+      internalID: 1779514904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_63
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbe8989c14fbaa4eb48d0c30b25baac
+      internalID: -1998381995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_64
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c605e5337c57e6428b999a03ee747ea
+      internalID: -1416295054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_65
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24da176b58678424bb13aec59f6a79f2
+      internalID: -478092623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 159
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679bf3424da7ad849b119045e3fb052a
+      internalID: 367926369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_67
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 159
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8b34b8608c7b64cbc333f4181e5d88
+      internalID: -708944285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_68
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 159
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7291522b9f4e804880f009e43eb62f7
+      internalID: 1690327091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_69
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 159
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5889df518a9a9e9429f4147c20fb12ec
+      internalID: -520002407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_70
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 159
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a7b0c7648189b4d8e81835c375d3e9
+      internalID: 165850794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_71
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 159
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb8cab2efadae9469989ce61734e9e5
+      internalID: 1494332013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_72
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 159
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c13a5cf80abbc468a487bd2d5eb1cb
+      internalID: 1587229466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_73
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 159
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02b2b36695b9394cb89c2705c2b6eb3
+      internalID: 1317606368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_74
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 159
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c755dfee099964bb541281452281d7
+      internalID: 241316975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_75
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 159
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1356fec0ff9914f94a08ca03cd5fb3
+      internalID: 326333196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_76
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 159
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e5c80372a8290499ca353f6ea4caf5
+      internalID: -512024614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_77
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 159
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb465f916814db4bac13bf344c81681
+      internalID: -1297423799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_78
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 143
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa355339928025841896fc3faec4137a
+      internalID: 1776891917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_79
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 143
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a95c9b2432af04591c0c9fecb52cf4
+      internalID: 203516386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_80
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 143
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d1533387dab3745b4bf8c0d00cea89
+      internalID: 861373537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_81
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 143
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da17ccb026e4f37449974aa42bb33fbb
+      internalID: 1872385229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_82
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 143
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67b5477f53accf4ab7ddda0144bcbc7
+      internalID: 898332291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_83
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39af29b562653c44860b6da9071d332
+      internalID: -516458860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_84
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 127
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5f3e9301663184db20b06b74f7e996
+      internalID: 1520609172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_85
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 127
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3c64f1767eeba47b2141ec72173209
+      internalID: -858516784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_86
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 127
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b22c7b94371554d90ca70316696d0d
+      internalID: -1606436930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_87
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 127
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5537738e86e8b474f96303c7a3a09ed8
+      internalID: -1951855864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_88
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 127
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f592e218ceb75f54987f7918e6babc91
+      internalID: -317095140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_89
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2ac4e3dc510a84a992eb50fdafd700
+      internalID: -849887526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_90
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244ac637c3f287542a6aedb701e9d0e3
+      internalID: -1125363700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_91
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b275e08f605f248b39df851959d3ae
+      internalID: 1119811675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_92
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70abd923439f93249969dd0a07bd5516
+      internalID: -1063886462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_93
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990f60bef979342488214788624b39a1
+      internalID: -1238906636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_94
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0248d2686efc41f4e9cf1a45dc6244ca
+      internalID: -1508391907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_95
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e95b815fe9f5494fba9896dc8593bce
+      internalID: 372969336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_96
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0f02767248b334f8ede6c4c2272642
+      internalID: -1626781897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_97
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 111
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9777dd272aa9944a9193717e79cf9c5
+      internalID: -715536715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c614fbbc4a439448a31891b046c13d5
+      internalID: -2034095219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_99
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd22dc7209db87a4fb17c530fb6dd342
+      internalID: -237195107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_100
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d8a03ce3a20064d8f8c3bf215ae3d7
+      internalID: 796120545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_101
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa17a58400d0f204a9589dadb4e1a3ac
+      internalID: 761902955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_102
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29afa22b0afdb8447a9f0cde97dc88ba
+      internalID: -635540136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_103
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1f7f5321e25dc4486e44a9c317352e
+      internalID: -1134593871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_104
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa03d501dc90cea41b4da9dd481367d1
+      internalID: -1280851474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_105
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e119f202746b84cb5dc21fc3d6d7ef
+      internalID: -73527057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_106
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d804c1d12e91d7e41aae83fec7eae53f
+      internalID: 908820586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_107
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1baa41596b21e94682e7cdc135e4901
+      internalID: -1547587089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_108
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1affcf9c59821794d9c55619794166ca
+      internalID: 1462640022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_109
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a1271a9f0828574c86bb700491f3354
+      internalID: -2133814202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_110
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3531d77bb612840a94f36fea6e8042
+      internalID: 1522962258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_111
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 95
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e2ad04cff2b1b479ccecb3199d9df0
+      internalID: 1343069575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850f5b6bcb1d9864097fb6669cb7af4b
+      internalID: -1452144163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_113
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e22a21b9b157242b935aa4104d62d1
+      internalID: -1938315011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_114
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2fab219465ab5c4b9dda6db4622e0d5
+      internalID: 783446371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_115
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58361b2e0a0aae34bbf950b3fa55fede
+      internalID: -778929423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_116
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bef5ee4a3ec6984f998dab821dfeaac
+      internalID: 32395430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_117
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db8b75cbb371ba4bbd7274c67f027c4
+      internalID: 827617039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_118
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80caf6b8d2a8acb40be32f6c7d21f172
+      internalID: -366853206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_119
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda240267c41d9944af33ed6ff7183e3
+      internalID: 1456505043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_120
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d583fc6f3d96aa94f9560f6e186909c7
+      internalID: 1294843224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_121
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27f582fa4e1d3042aee593300ae0f90
+      internalID: 76500396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_122
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9963c53e7c2934baef7d20c689841b
+      internalID: -116291952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_123
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81e11f2bc3f2b0429a06268bb6a3fd8
+      internalID: 366854302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_124
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0d18b0ec8c6ce43b75a9bff62510d5
+      internalID: 1712869354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_125
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 79
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b127c87322276e043a688b4adc2b4763
+      internalID: 195119231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_126
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97aa4058ee8d95f4cb7515594299ae63
+      internalID: -596677645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_127
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d07b42d54ef4724ea848c23860f9c18
+      internalID: -1483459921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_128
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6899b26581ced1c409763ea1f3d4c93c
+      internalID: 1843093961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_129
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190936fdf3226324cb81ec3df9882b3d
+      internalID: -1730950255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_130
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7e24d9111f8ee45a35a9982d9e42ac
+      internalID: 1061739184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_131
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4955bd82c651d40910de97116d88e4
+      internalID: -521743934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_132
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b712010e9ef021047a8af2c49a0f0539
+      internalID: -1355608180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_133
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87603039034b8140b79b089d697095d
+      internalID: 1229161255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_134
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0aab2661d383b34db32432f10f46d72
+      internalID: 529775422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_135
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc41828eb92fb94459d8f9c5e6420486
+      internalID: -388505433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_136
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9508d89fe7bc6004f9d8e54d21b575ab
+      internalID: 1256498354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_137
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03bb0896590765c4a86c0af962121c5b
+      internalID: -1949393399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_138
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64ac6e87d7006f4ea9e1006a895b93b
+      internalID: -880992243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_139
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3739eb557cec35419ff4b7e136001ad
+      internalID: -1797044001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_140
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826461103d0dbc34e8d4a04b40d3eb04
+      internalID: 2129680729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_141
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33929444de46caa4ca8c9fcca14c328d
+      internalID: 1740388764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_142
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c72d4eb063a19640bf7bd8ac25b33eb
+      internalID: -1182323076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_143
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c047ea5a3a2798f4ea28ec8bced3565f
+      internalID: 1223977493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_144
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af3eef69b9439f4986d907a98a8dc0f
+      internalID: 1933963808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_145
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9254339117672164f8c0d5d9f3b167b8
+      internalID: -1882997792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_146
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3869c25dce8934b86d3e70827397f5
+      internalID: 1541697435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_147
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e7ee06d7de748478917df2daa0369c
+      internalID: -1762524160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_148
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1a7f6ef3030e0428a333e75395d630
+      internalID: -675966819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_149
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ce96057420776439cb1d99130396c8
+      internalID: 1072743875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_150
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f9fe35894c06c41aa9ea43b3a60b14
+      internalID: -1462136468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_151
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4776856fb7f8f6c46972c4b79b766d57
+      internalID: 592813176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_152
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514a429ffc1350f46803072b1fae4c08
+      internalID: -1012041807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_153
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2cb080f066d5747826f7ce701526a0
+      internalID: -1632657578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_154
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb3d2c4d0d9ccc42806e9a7a1180cab
+      internalID: 54503890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_155
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f3e16bd0cfa48468e76435158805b8
+      internalID: 882355193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_156
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7139e6685af10304298e5aeb2792ee8b
+      internalID: -1003326298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_157
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c782c933bb7c9284bb308b071d21b48f
+      internalID: 1095520033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_158
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbeb1c8e2bdd0945a37d45f1e83a45a
+      internalID: -327714722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_159
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42bb2b2f6d23e3943af2d8b5db58025f
+      internalID: 1323291480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_160
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e872109c8c2654da2c92bc3d39c8b3
+      internalID: 1613821138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_161
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f8c9bbfac2ff84dbac73d49394b0b2
+      internalID: 943806845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_162
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e7a6cc23bb6f441ae4156557d44a44
+      internalID: 1773237100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_163
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5b449c9d8d6eb47a4fcf874613f4a9
+      internalID: -902502352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_164
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 31
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb93e04e4b52deb48a31160dfe343bcd
+      internalID: -756142636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_165
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 15
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4223af355747d91408b2d41c8f8d9c51
+      internalID: -1035498959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_166
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 15
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0601dc5f4f87b7447969bbe1fcdee55d
+      internalID: 524431672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_167
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 15
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e1a5ab62874e44390075a83bb0ea6f
+      internalID: 709149268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_168
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 15
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9809294a899532468fc85a0161bfc1d
+      internalID: 231035113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_169
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 15
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540d75b597fedd0489b942f070c114be
+      internalID: 761805703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_170
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 15
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d8c866029aaab4dbc22cf90000fd2d
+      internalID: -288452214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_171
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 15
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e11b8617a28b70459b36a74dd443022
+      internalID: 502846269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_172
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 15
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc76c8ce91a4ca41add3bc17ad8f0e9
+      internalID: 1595107951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_173
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 15
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d021bc743078044face2054042396f6
+      internalID: 774302249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_174
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 15
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6914417519f01224aa3fc55f146d1a65
+      internalID: 971197716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_57: -226165073
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_107: -1547587089
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_152: -1012041807
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_141: 1740388764
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_64: -1416295054
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_172: 1595107951
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_5: 1260701459
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_53: -1755333766
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_173: 774302249
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_171: 502846269
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_49: -729597343
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_158: -327714722
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_84: 1520609172
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_12: -31342025
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_162: 1773237100
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_37: -108479000
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_46: -1798109535
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_165: -1035498959
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_90: -1125363700
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_147: -1762524160
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_0: -758121787
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_28: -1551917116
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_91: 1119811675
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_79: 203516386
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_3: -54584956
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_44: -333432519
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_144: 1933963808
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_81: 1872385229
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_131: -521743934
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_19: -761317871
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_68: 1690327091
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_130: 1061739184
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_128: 1843093961
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_39: -247663902
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_16: -230512084
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_129: -1730950255
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_32: 353176332
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_10: -1847806174
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_50: 27040527
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_15: 1020580250
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_7: 533236483
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_145: -1882997792
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_115: -778929423
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_126: -596677645
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_133: 1229161255
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_164: -756142636
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_157: 1095520033
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_123: 366854302
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_127: -1483459921
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_95: 372969336
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_135: -388505433
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_74: 241316975
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_48: -1797603757
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_120: 1294843224
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_69: -520002407
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_89: -849887526
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_170: -288452214
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_103: -1134593871
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_122: -116291952
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_168: 231035113
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_102: -635540136
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_108: 1462640022
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_43: -1510708763
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_38: 1504172905
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_65: -478092623
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_88: -317095140
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_163: -902502352
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_137: -1949393399
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_106: 908820586
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_47: 1260065834
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_34: -1183483057
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_2: -1697257185
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_76: -512024614
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_117: 827617039
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_56: -1152662815
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_83: -516458860
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_151: 592813176
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_11: -1893559762
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_77: -1297423799
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_21: -1601112677
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_82: 898332291
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_93: -1238906636
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_18: -751460221
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_1: 853055465
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_61: -1559267161
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_110: 1522962258
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_9: -937960117
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_80: 861373537
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_109: -2133814202
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_125: 195119231
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_104: -1280851474
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_45: -39265371
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_118: -366853206
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_148: -675966819
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_31: 2009763437
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_96: -1626781897
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_154: 54503890
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_160: 1613821138
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_41: -1222427242
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_169: 761805703
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_72: 1587229466
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_78: 1776891917
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_35: -1946197354
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_86: -1606436930
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_36: 1527048635
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_124: 1712869354
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_140: 2129680729
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_155: 882355193
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_98: -2034095219
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_24: 1383093899
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_6: 1517673408
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_25: 1678661067
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_62: 1779514904
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_51: 1648141651
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_30: -1312553630
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_67: -708944285
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_17: -2010490858
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_87: -1951855864
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_136: 1256498354
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_150: -1462136468
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_55: 899237544
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_111: 1343069575
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_23: -970389147
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_116: 32395430
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_166: 524431672
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_112: -1452144163
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_27: 649282594
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_52: -1132387760
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_105: -73527057
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_8: -1253217361
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_94: -1508391907
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_14: 2068851214
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_92: -1063886462
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_40: -1419366985
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_33: -267381280
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_59: 1746617382
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_63: -1998381995
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_121: 76500396
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_139: -1797044001
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_149: 1072743875
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_113: -1938315011
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_138: -880992243
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_146: 1541697435
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_153: -1632657578
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_142: -1182323076
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_58: -1157857617
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_71: 1494332013
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_73: 1317606368
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_42: 213659754
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_159: 1323291480
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_75: 326333196
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_174: 971197716
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_97: -715536715
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_100: 796120545
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_119: 1456505043
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_60: -2003624391
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_70: 165850794
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_156: -1003326298
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_29: 1393939347
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_134: 529775422
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_13: -1608502898
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_161: 943806845
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_132: -1355608180
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_20: 472985289
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_101: 761902955
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_143: 1223977493
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_26: -968450544
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_114: 783446371
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_85: -858516784
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_54: 1549737736
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_99: -237195107
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_22: 1833027195
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_66: 367926369
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_167: 709149268
+      destroyed_buildings_by_poison_master_d242u7o-fococlipping-standard_4: -62896481
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
