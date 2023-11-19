@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScenes/Route 2.unity
     guid: 38eb7a03acea6024f904a84c085bea52
   - enabled: 1
-    path: Assets/Scenes/GameScenes/Route 3.unity
+    path: Assets/Scenes/GameScenes/Abondoned Town.unity
     guid: 305e23fc59f12ac4bbe74a7a9758fced
   m_configObjects: {}

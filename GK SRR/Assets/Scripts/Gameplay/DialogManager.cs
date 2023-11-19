@@ -26,17 +26,21 @@ public class DialogManager : MonoBehaviour
 
     public bool isShowing { get; private set; }
 
-    public IEnumerator  ShowDialog(Dialog dialog)
+    public IEnumerator  ShowDialog(Dialog dialog, GameObject toActivate)
     {
         yield return new WaitForEndOfFrame();
 
-        OnShowDialog?.Invoke();
+        toActivate.SetActive(true);
+
+/*        OnShowDialog?.Invoke();
 
         isShowing = true;
         this.dialog = dialog;
         dialogBox.SetActive(true);
-        StartCoroutine(TypeDialog(dialog.Lines[0]));
+        StartCoroutine(TypeDialog(dialog.Lines[0]));*/
     }
+
+
 
     public void HandleUpdate()
     {

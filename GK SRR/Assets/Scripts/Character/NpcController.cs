@@ -8,6 +8,7 @@ public class NpcController : MonoBehaviour, Interactable
     [SerializeField] List<Vector2> movementPattern;
     [SerializeField] float timeBetweenPattern;
     [SerializeField] bool canHeal = false;
+    [SerializeField] GameObject toActivate;
 
     NPCState state;
     float idleTimer = 0f;
@@ -27,7 +28,9 @@ public class NpcController : MonoBehaviour, Interactable
 
             character.LookTowards(initiator.position);
 
-            StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+            StartCoroutine(DialogManager.Instance.ShowDialog(dialog, toActivate));
+
+            //toActivate.SetActive(true);
 
             state = NPCState.Idle;
 
@@ -43,6 +46,11 @@ public class NpcController : MonoBehaviour, Interactable
                 }
             }
         }
+    }
+
+    public void CloseButton()
+    {
+        toActivate.SetActive(false);
     }
 
     private void Update()
